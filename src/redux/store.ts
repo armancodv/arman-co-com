@@ -1,11 +1,10 @@
-import {applyMiddleware, compose, createStore, Store} from "redux";
+import createSagaMiddleware from 'redux-saga';
+import {applyMiddleware, createStore, Store} from "redux";
+import {composeWithDevTools} from 'redux-devtools-extension'
 import reducers from "./reducers";
-// @ts-ignore
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({name: 'Armanco'}) : (f) => f;
 
-export default function initStore(): Store {
-    return createStore(
-        reducers,
-        compose(applyMiddleware(), devTools),
-    );
-};
+const sagaMiddleware = createSagaMiddleware();
+const middlewares = [sagaMiddleware];
+const store: Store = createStore(reducers, composeWithDevTools(applyMiddleware(...middlewares)));
+// sagaMiddleware.run(sagas);
+export default store;
