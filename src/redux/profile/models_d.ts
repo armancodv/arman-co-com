@@ -4,3 +4,10 @@ export type ProfileState = {
     lastName: string;
     title: string;
 }
+
+export type ProfileResponse = {
+    id: string;
+    firstName: string;
+    lastName: string;
+    title: string;
+}

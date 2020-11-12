@@ -1,1 +1,6 @@
-export const FETCH_PROFILE = `FETCH_PROFILE`;
+const FETCH_PROFILE = `FETCH_PROFILE`;
+const SET_PROFILE = `SET_PROFILE`;
+export default {
+    FETCH_PROFILE,
+    SET_PROFILE,
+}

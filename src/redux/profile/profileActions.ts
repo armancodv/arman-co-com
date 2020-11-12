@@ -1,7 +1,17 @@
 import {Action} from "../models_d";
-import {FETCH_PROFILE} from "./profileTypes";
+import {ProfileResponse} from "./models_d";
+import profileTypes from "./profileTypes";
 
-export const fetchProfile = (): Action => ({
-    type: FETCH_PROFILE
+const fetchProfile = (): Action => ({
+    type: profileTypes.FETCH_PROFILE
 })
 
+const setProfile = (profile: ProfileResponse): Action<ProfileResponse> => ({
+    type: profileTypes.SET_PROFILE,
+    payload: profile
+})
+
+export default {
+    fetchProfile,
+    setProfile
+}

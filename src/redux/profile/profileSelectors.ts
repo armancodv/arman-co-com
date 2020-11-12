@@ -1,3 +1,8 @@
 import {State} from "../models_d";
+import {ProfileState} from "./models_d";
 
-export const getProfile = (state: State) => state?.profile
+const getProfile = (state: State): ProfileState => state?.profile;
+
+export default {
+    getProfile
+}

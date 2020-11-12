@@ -1,3 +1,9 @@
-export const fetchProfile = (client) => async (): Promise<unknown> => {
-    return client.GET(``);
+import axios from 'axios';
+
+const getProfile = (): Promise<Response> => {
+    return axios.get('')
+}
+
+export default {
+    getProfile
 }
