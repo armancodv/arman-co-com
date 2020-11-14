@@ -1,9 +1,6 @@
 body {
   margin: 0;
 }
-.App {
-  text-align: center;
-}
-.layout {
+.app {
   height: 100vh;
 }
