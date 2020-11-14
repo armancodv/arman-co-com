@@ -16,6 +16,8 @@ function* fetchProfile(action: Action) {
 function* watchFetchProfile() {
     yield takeLatest(profileTypes.FETCH_PROFILE, fetchProfile)
 }
-export default [
+
+const profileSaga = [
     watchFetchProfile()
 ]
+export default profileSaga;

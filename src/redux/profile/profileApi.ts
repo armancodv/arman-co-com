@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const getProfile = (): Promise<Response> => {
-    return axios.get('')
+const profileApi = {
+    getProfile: (): Promise<Response> => {
+        return axios.get('')
+    }
 }
 
-export default {
-    getProfile
-}
+export default profileApi;
