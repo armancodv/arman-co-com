@@ -1,0 +1,8 @@
+const BASE = process?.env?.REACT_APP_API_BASE_URL || 'http://localhost:3000';
+const getProfile = `${BASE}/profile`;
+const apiConfig = {
+    BASE,
+    getProfile
+}
+
+export default apiConfig;

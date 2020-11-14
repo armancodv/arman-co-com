@@ -1,8 +1,9 @@
 import axios from 'axios';
+import apiConfig from "../../config/apiConfig";
 
 const profileApi = {
     getProfile: (): Promise<Response> => {
-        return axios.get('')
+        return axios.get(apiConfig.getProfile)
     }
 }
 
