@@ -13,6 +13,7 @@
     "@types/react-redux": "^7.1.11",
     "@types/react-router": "^5.1.8",
     "@types/react-router-dom": "^5.1.6",
+    "antd": "^4.8.2",
     "axios": "^0.21.0",
     "connected-react-router": "^6.8.0",
     "history": "^5.0.0",

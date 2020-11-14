@@ -1,36 +1,24 @@
 import React from 'react';
+import AppContent from "./AppContent";
+import {Layout, Menu} from 'antd';
+
+import "antd/dist/antd.css";
 import './App.css';
-import {Route, Switch} from "react-router";
-import {BrowserRouter as Router, Link} from "react-router-dom";
-import {ConnectedRouter} from "connected-react-router";
-import {history} from "../redux/store";
 
 function App() {
     return (
-        <ConnectedRouter history={history}>
-            <Router>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <Switch>
-                        <Route path="/contact">
-                            Contact
-                        </Route>
-                        <Route path="/">
-                            Home
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
-        </ConnectedRouter>
+        <Layout className="layout">
+            <Layout.Header className="header">
+                <div className="logo"/>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['home']}>
+                    <Menu.Item key="home">Home</Menu.Item>
+                    <Menu.Item key="contact">Contact</Menu.Item>
+                </Menu>
+            </Layout.Header>
+            <Layout.Content className="content">
+                <AppContent/>
+            </Layout.Content>
+        </Layout>
     );
 }
 
