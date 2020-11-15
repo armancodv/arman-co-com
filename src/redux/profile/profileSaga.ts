@@ -3,11 +3,12 @@ import {Action} from "../models_d";
 import profileApi from "./profileApi";
 import profileActions from "./profileActions";
 import profileTypes from "./profileTypes";
+import {AxiosResponse} from "axios";
 import {ProfileResponse} from "./models_d";
 function* fetchProfile(action: Action) {
     try {
-        const data: ProfileResponse = yield call(profileApi.getProfile);
-        yield put(profileActions.setProfile(data))
+        const response: AxiosResponse<ProfileResponse> = yield call(profileApi.getProfile);
+        yield put(profileActions.setProfile(response.data))
     }catch(e) {
         console.log(e);
     }

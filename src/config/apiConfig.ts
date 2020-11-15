@@ -1,5 +1,5 @@
 const BASE = process?.env?.REACT_APP_API_BASE_URL || 'http://localhost:3000';
-const getProfile = `${BASE}/profile`;
+const getProfile = `${BASE}/profile.json`;
 const apiConfig = {
     BASE,
     getProfile
