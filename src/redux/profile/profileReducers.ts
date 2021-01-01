@@ -1,5 +1,5 @@
 import {ProfileState} from './models_d';
-import {Action} from "../models_d";
+import {Action, FetchState} from "../models_d";
 import profileTypes from "./profileTypes";
 
 const initialState: ProfileState = {
@@ -8,7 +8,8 @@ const initialState: ProfileState = {
         firstName: '',
         lastName: '',
         title: ''
-    }
+    },
+    dataState: FetchState.INIT
 }
 
 const profileReducers = (state: ProfileState = initialState, action: Action): ProfileState => {
@@ -17,6 +18,11 @@ const profileReducers = (state: ProfileState = initialState, action: Action): Pr
             return {
                 ...state,
                 data: action.payload || state.data
+            }
+        case profileTypes.SET_PROFILE_STATE:
+            return {
+                ...state,
+                dataState: action.payload || FetchState.INIT
             }
         default:
             return state;

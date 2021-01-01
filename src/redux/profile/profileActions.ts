@@ -1,4 +1,4 @@
-import {Action} from "../models_d";
+import {Action, FetchState} from "../models_d";
 import {ProfileResponse} from "./models_d";
 import profileTypes from "./profileTypes";
 const profileActions = {
@@ -8,6 +8,10 @@ const profileActions = {
     setProfile: (profile: ProfileResponse): Action<ProfileResponse> => ({
         type: profileTypes.SET_PROFILE,
         payload: profile
+    }),
+    setProfileState: (fetchState: FetchState): Action<FetchState> => ({
+        type: profileTypes.SET_PROFILE_STATE,
+        payload: fetchState
     })
 }
 

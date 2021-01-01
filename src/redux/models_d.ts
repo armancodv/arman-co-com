@@ -6,6 +6,13 @@ export type Action<P = any> = {
     payload?: P;
 }
 
+export enum FetchState {
+    INIT = 'INIT',
+    LOADING = 'LOADING',
+    SUCCESS = 'SUCCESS',
+    FAIL = 'FAIL'
+}
+
 export type State = {
     profile: ProfileState;
     skills: SkillsState;

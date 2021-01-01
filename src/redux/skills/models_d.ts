@@ -1,3 +1,5 @@
+import {FetchState} from "../models_d";
+
 export type Skill = {
     id: string;
     name: string;
@@ -6,4 +8,5 @@ export type Skill = {
 export type SkillsResponse = Skill[]
 export type SkillsState = {
     data: SkillsResponse
+    dataState: FetchState
 }

@@ -1,9 +1,10 @@
 import {SkillsState} from './models_d';
-import {Action} from "../models_d";
+import {Action, FetchState} from "../models_d";
 import skillsTypes from "./skillsTypes";
 
 const initialState: SkillsState = {
-    data: []
+    data: [],
+    dataState: FetchState.INIT
 }
 
 const skillsReducers = (state: SkillsState = initialState, action: Action): SkillsState => {
@@ -12,6 +13,11 @@ const skillsReducers = (state: SkillsState = initialState, action: Action): Skil
             return {
                 ...state,
                 data: action.payload || state.data
+            }
+        case skillsTypes.SET_SKILLS_STATE:
+            return {
+                ...state,
+                dataState: action.payload || FetchState.INIT
             }
         default:
             return state;
