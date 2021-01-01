@@ -4,7 +4,10 @@ export type ProfileResponse = {
     id: string;
     firstName: string;
     lastName: string;
+    nickName?: string;
     title: string;
+    location?: string;
+    description?: string;
 }
 export type ProfileState = {
     data: ProfileResponse,
