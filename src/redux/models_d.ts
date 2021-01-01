@@ -1,5 +1,6 @@
 import {ProfileState} from "./profile/models_d";
 import {SkillsState} from "./skills/models_d";
+import {ExperienceState} from "./experience/models_d";
 
 export type Action<P = any> = {
     type: string;
@@ -16,4 +17,5 @@ export enum FetchState {
 export type State = {
     profile: ProfileState;
     skills: SkillsState;
+    experience: ExperienceState;
 }
