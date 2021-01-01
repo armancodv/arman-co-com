@@ -7,11 +7,13 @@ import AppHeader from "./layout/AppHeader";
 import AppContent from "./layout/AppContent";
 import {useDispatch} from "react-redux";
 import profileActions from "../redux/profile/profileActions";
+import skillsActions from "../redux/skills/skillsActions";
 
 const App: React.FunctionComponent = () => {
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(profileActions.fetchProfile())
+        dispatch(skillsActions.fetchSkills())
     }, [dispatch])
     return (
         <Layout className="app">

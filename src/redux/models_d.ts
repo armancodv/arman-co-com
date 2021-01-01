@@ -1,4 +1,5 @@
 import {ProfileState} from "./profile/models_d";
+import {SkillsState} from "./skills/models_d";
 
 export type Action<P = any> = {
     type: string;
@@ -7,4 +8,5 @@ export type Action<P = any> = {
 
 export type State = {
     profile: ProfileState;
+    skills: SkillsState;
 }
