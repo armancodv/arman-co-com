@@ -1,6 +1,6 @@
 import React from "react";
 
-const Content: React.FunctionComponent = () => {
+const Content: React.FC = () => {
     return <>Content</>
 }
 

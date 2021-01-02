@@ -1,6 +1,7 @@
 @import "layout/theme";
 body {
   background: $light;
+  font-family: $font-family-default;
 }
 .app {
   &-side-bar, &-content {

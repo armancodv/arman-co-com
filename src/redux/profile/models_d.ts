@@ -8,6 +8,7 @@ export type ProfileResponse = {
     title: string;
     location?: string;
     description?: string;
+    image?: string;
 }
 export type ProfileState = {
     data: ProfileResponse,

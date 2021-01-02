@@ -8,7 +8,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "./layout/SideBar/SideBar";
 import Content from "./layout/Content/Content";
 
-const App: React.FunctionComponent = () => {
+const App: React.FC = () => {
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(profileActions.fetchProfile())

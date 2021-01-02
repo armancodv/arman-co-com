@@ -1,0 +1,27 @@
+@import "src/components/layout/variables";
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .avatar {
+    margin-top: 46px;
+  }
+  h1 {
+    font-size: 32px;
+    color: $light;
+    margin-top: 16px;
+  }
+  .badge {
+    align-self: flex-end;
+    margin-right: 18px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 24px;
+    color: $light;
+    margin-top: 16px;
+    text-align: center;
+  }
+}
