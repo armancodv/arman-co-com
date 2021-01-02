@@ -1,0 +1,12 @@
+// colors
+$primary: #ABCBBE;
+$dark: #222222;
+$light: #EEEEEE;
+
+// sizes
+$viewHeight: 100vh;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/breakpoints";

@@ -1,5 +1,21 @@
-@import "theme";
-
+@import "layout/theme";
+body {
+  background: $light;
+}
 .app {
-  height: 100vh;
+  &-side-bar, &-content {
+    height: $viewHeight;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+  }
+  &-side-bar {
+    background: $dark;
+  }
+  @include media-breakpoint-between(xs, sm) {
+    &-side-bar, &-content {
+      height: auto;
+      overflow: hidden;
+    }
+  }
 }

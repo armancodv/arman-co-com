@@ -5,6 +5,8 @@ import profileActions from "../redux/profile/profileActions";
 import skillsActions from "../redux/skills/skillsActions";
 import experienceActions from "../redux/experience/experienceActions";
 import {Col, Container, Row} from "react-bootstrap";
+import SideBar from "./layout/SideBar/SideBar";
+import Content from "./layout/Content/Content";
 
 const App: React.FunctionComponent = () => {
     const dispatch = useDispatch();
@@ -16,8 +18,12 @@ const App: React.FunctionComponent = () => {
     return (
         <Container fluid className="app">
             <Row>
-                <Col lg={2}>Sider</Col>
-                <Col lg={10}>1 of 1</Col>
+                <Col md={3} lg={2} className="app-side-bar">
+                    <SideBar />
+                </Col>
+                <Col md={9} lg={10} className="app-content">
+                    <Content />
+                </Col>
             </Row>
         </Container>
     );
