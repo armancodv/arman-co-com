@@ -1,14 +1,10 @@
 import React, {useEffect} from 'react';
-import {Layout} from 'antd';
-
-import "antd/dist/antd.css";
-import './App.css';
-import AppHeader from "./layout/AppHeader";
-import AppContent from "./layout/AppContent";
+import './App.scss';
 import {useDispatch} from "react-redux";
 import profileActions from "../redux/profile/profileActions";
 import skillsActions from "../redux/skills/skillsActions";
 import experienceActions from "../redux/experience/experienceActions";
+import {Col, Container, Row} from "react-bootstrap";
 
 const App: React.FunctionComponent = () => {
     const dispatch = useDispatch();
@@ -18,10 +14,12 @@ const App: React.FunctionComponent = () => {
         dispatch(experienceActions.fetchExperience())
     }, [dispatch])
     return (
-        <Layout className="app">
-            <AppHeader />
-            <AppContent />
-        </Layout>
+        <Container fluid className="app">
+            <Row>
+                <Col lg={2}>Sider</Col>
+                <Col lg={10}>1 of 1</Col>
+            </Row>
+        </Container>
     );
 }
 
