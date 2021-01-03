@@ -1,0 +1,11 @@
+.skill-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &-progress {
+    width: 24px;
+  }
+  &-title {
+    margin-left: 4px;
+  }
+}
