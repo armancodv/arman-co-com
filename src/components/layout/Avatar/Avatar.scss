@@ -1,6 +1,9 @@
 @import "src/components/layout/variables";
 .avatar {
   .image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     border: 4px $primary solid;
   }
 }

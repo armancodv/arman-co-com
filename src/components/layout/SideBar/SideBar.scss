@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6px;
   .avatar {
     margin-top: 46px;
   }
@@ -11,6 +12,7 @@
     font-size: 32px;
     color: $light;
     margin-top: 16px;
+    text-align: center;
   }
   .badge {
     align-self: flex-end;
@@ -23,5 +25,10 @@
     color: $light;
     margin-top: 16px;
     text-align: center;
+  }
+  @media (max-width: $max-md) {
+    .badge {
+      align-self: center;
+    }
   }
 }

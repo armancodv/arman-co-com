@@ -9,7 +9,7 @@ interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
 const Avatar: React.FC<AvatarProps> = (props) => {
     return (
         <div {...props} className="avatar">
-            <Image className="image" roundedCircle src={props.src} width={200} height={200} />
+            <Image className="image" roundedCircle src={props.src} />
         </div>
     );
 }

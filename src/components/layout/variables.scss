@@ -5,6 +5,15 @@ $light: #EEEEEE;
 
 // sizes
 $viewHeight: 100vh;
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 992px;
+$min-xl: 1200px;
+
+$max-xs: 575px;
+$max-sm: 767px;
+$max-md: 991px;
+$max-lg: 1199px;
 
 // fonts
 $font-family-default: "Andika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
