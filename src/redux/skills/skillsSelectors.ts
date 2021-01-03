@@ -1,7 +1,7 @@
 import {State} from "../models_d";
-import {SkillsState} from "./models_d";
+import {Skill} from "./models_d";
 const skillsSelectors = {
-    getSkills: (state: State): SkillsState => state?.skills
+    getSkills: (state: State): Skill[] => state?.skills?.data ?? []
 }
 
 export default skillsSelectors
