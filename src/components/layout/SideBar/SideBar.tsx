@@ -8,8 +8,11 @@ import {Badge} from "react-bootstrap";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {faGithub, faLinkedin, faMedium, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {SocialIcon} from "../../../redux/profile/models_d";
+import {FetchState} from "../../../redux/models_d";
+import State from "../State/State";
 
 const SideBar: React.FC = () => {
+    const fetchState = useSelector(profileSelectors.getFetchState)
     const fullName = useSelector(profileSelectors.getFullName)
     const nickName = useSelector(profileSelectors.getNickName)
     const title = useSelector(profileSelectors.getTitle)
@@ -29,17 +32,23 @@ const SideBar: React.FC = () => {
     }
     return (
         <div className="side-bar">
-            <Avatar src={image}/>
-            <h1>{fullName}</h1>
-            <Badge variant="primary">{nickName.toUpperCase()}</Badge>
-            <h2>{title}</h2>
-            <div className="social">
-                {social.map((item) => (
-                    <a href={item?.link} target="_blank" key={item?.id}>
-                        <FontAwesomeIcon icon={getFontAwesomeIcon(item?.icon)} color="#eeeeee" size="2x"/>
-                    </a>
-                ))}
-            </div>
+            {fetchState !== FetchState.SUCCESS ? (
+                <State variant="primary" fetchState={fetchState}/>
+            ) : (
+                <>
+                    <Avatar src={image}/>
+                    <h1>{fullName}</h1>
+                    <Badge variant="primary">{nickName.toUpperCase()}</Badge>
+                    <h2>{title}</h2>
+                    <div className="social">
+                        {social.map((item) => (
+                            <a href={item?.link} target="_blank" key={item?.id}>
+                                <FontAwesomeIcon icon={getFontAwesomeIcon(item?.icon)} color="#eeeeee" size="2x"/>
+                            </a>
+                        ))}
+                    </div>
+                </>
+            )}
         </div>
     );
 }
