@@ -12,6 +12,6 @@ const Avatar: React.FC<AvatarProps> = (props) => {
             <Image className="image" roundedCircle src={props.src} />
         </div>
     );
-}
+};
 
 export default Avatar;

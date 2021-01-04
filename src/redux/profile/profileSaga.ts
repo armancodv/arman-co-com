@@ -1,12 +1,12 @@
 import {call, put, takeLatest} from 'redux-saga/effects'
-import {Action, FetchState} from "../models_d";
+import {FetchState} from "../models_d";
 import profileApi from "./profileApi";
 import profileActions from "./profileActions";
 import profileTypes from "./profileTypes";
 import {AxiosResponse} from "axios";
 import {ProfileResponse} from "./models_d";
 
-function* fetchProfile(action: Action) {
+function* fetchProfile() {
     try {
         yield put(profileActions.setProfileState(FetchState.LOADING))
         const response: AxiosResponse<ProfileResponse> = yield call(profileApi.getProfile);

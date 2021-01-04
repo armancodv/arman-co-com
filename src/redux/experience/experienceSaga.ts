@@ -1,12 +1,12 @@
 import {call, put, takeLatest} from 'redux-saga/effects'
-import {Action, FetchState} from "../models_d";
+import {FetchState} from "../models_d";
 import experienceApi from "./experienceApi";
 import experienceActions from "./experienceActions";
 import experienceTypes from "./experienceTypes";
 import {AxiosResponse} from "axios";
 import {ExperienceResponse} from "./models_d";
 
-function* fetchExperience(action: Action) {
+function* fetchExperience() {
     try {
         yield put(experienceActions.setExperienceState(FetchState.LOADING))
         const response: AxiosResponse<ExperienceResponse> = yield call(experienceApi.getExperience);
