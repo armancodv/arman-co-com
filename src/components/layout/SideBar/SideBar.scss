@@ -26,6 +26,16 @@
     margin-top: 16px;
     text-align: center;
   }
+  .social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    svg {
+      margin: 8px;
+    }
+  }
   @media (max-width: $max-md) {
     .badge {
       align-self: center;
