@@ -1,5 +1,4 @@
 import {State} from "../models_d";
-import {ProfileState} from "./models_d";
 const profileSelectors = {
     getFullName: (state: State): string => `${state?.profile?.data?.firstName ?? ''} ${state?.profile?.data?.lastName ?? ''}`,
     getNickName: (state: State): string => state?.profile?.data?.nickName ?? '',

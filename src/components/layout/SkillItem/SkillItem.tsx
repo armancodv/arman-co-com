@@ -1,7 +1,6 @@
 import React from "react";
 import {Skill} from "../../../redux/skills/models_d";
 import {CircularProgressbar} from "react-circular-progressbar";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'react-circular-progressbar/dist/styles.css';
 import './SkillIem.scss';
 
