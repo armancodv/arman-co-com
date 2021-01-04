@@ -1,0 +1,9 @@
+@import "src/components/layout/variables";
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $primary;
+  padding: 8px 16px;
+  color: $dark;
+}
