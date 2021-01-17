@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Arman Kolahan",
+  "name": "Arman Kolahan | Senior Software Engineer",
+  "description": "I am an Android and Full-Stack developer, with main experience in JavaScript, Kotlin, PHP, and Java",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://arman.co.com",
+  "scope": "https://arman.co.com",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ABCBBE",
+  "background_color": "#EEEEEE"
 }
