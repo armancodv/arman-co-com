@@ -1,12 +1,13 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import experienceSelectors from "../../../redux/experience/experienceSelectors";
+import ExperienceItem from "../../layout/ExperienceItem/ExperienceItem";
 
 const Experience: React.FC = () => {
-    const experience = useSelector(experienceSelectors.getExperience);
+    const experienceList = useSelector(experienceSelectors.getExperience);
     return (
         <div>
-            {JSON.stringify(experience)}
+            {experienceList?.map((experience) => <ExperienceItem experience={experience}/>)}
         </div>
     )
 }

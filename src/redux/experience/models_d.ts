@@ -11,8 +11,7 @@ export type Experience = {
     description: string;
     company: Company;
     location: string;
-    startDate: string;
-    endDate?: string;
+    duration: string;
 }
 export type ExperienceResponse = Experience[]
 export type ExperienceState = {
