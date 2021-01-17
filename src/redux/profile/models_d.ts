@@ -1,10 +1,10 @@
 import {FetchState} from "../models_d";
+import {IconString} from "../../utils/getFontAwesomeIcon";
 
-export type SocialIcon = 'github' | 'linkedin' | 'twitter' | 'medium';
 export type Social = {
     id: string;
     title: string;
-    icon: SocialIcon;
+    icon: IconString;
     link: string;
 }
 

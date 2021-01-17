@@ -2,9 +2,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 8px 0 4px;
+  align-content: center;
+  margin: 0 16px 0 0;
   &-progress {
-    width: 24px;
+    width: 20px;
+    height: 28px;
+  }
+  &-icon {
+    margin-left: 4px;
+  }
+  &-badge {
+    margin-left: 4px;
   }
   &-title {
     margin-left: 4px;
