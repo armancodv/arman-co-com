@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import './SkillIem.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import getFontAwesomeIcon from "../../../utils/getFontAwesomeIcon";
-import {faCertificate} from "@fortawesome/free-solid-svg-icons";
+import {faCertificate, faStar} from "@fortawesome/free-solid-svg-icons";
 
 interface SkillItemProps extends React.HTMLAttributes<HTMLDivElement> {
     skill: Skill;
@@ -28,8 +28,8 @@ const SkillItem: React.FC<SkillItemProps> = (props) => {
             <div className="skill-item-title">
                 {props?.skill?.name}
             </div>
-            {props?.skill?.icon ? <FontAwesomeIcon className="skill-item-icon" icon={getFontAwesomeIcon(props?.skill?.icon)} color="#7c9a8e" size="lg"/> : null}
-            {props?.skill?.hasBadge ? <FontAwesomeIcon className="skill-item-badge" icon={faCertificate} color="#7c9a8e" size="1x"/> : null}
+            {props?.skill?.icon ? <FontAwesomeIcon className="skill-item-icon" icon={getFontAwesomeIcon(props?.skill?.icon)} color="#ABCBBE" size="lg"/> : null}
+            {props?.skill?.hasBadge ? <FontAwesomeIcon className="skill-item-badge" icon={faStar} color="#ABCBBE" size="xs"/> : null}
         </div>
     );
 }

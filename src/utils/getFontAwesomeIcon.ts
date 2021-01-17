@@ -1,7 +1,17 @@
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
-import {faGithub, faJs, faLinkedin, faMedium, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {
+    faAndroid,
+    faGithub,
+    faJava,
+    faJs,
+    faLinkedin,
+    faMedium,
+    faNodeJs,
+    faPhp,
+    faTwitter
+} from "@fortawesome/free-brands-svg-icons";
 
-export type IconString = 'github' | 'linkedin' | 'twitter' | 'medium' | 'js';
+export type IconString = 'github' | 'linkedin' | 'twitter' | 'medium' | 'js' | 'android' | 'php' | 'java' | 'nodeJs';
 
 const getFontAwesomeIcon = (icon: IconString): IconProp => {
     switch (icon) {
@@ -15,6 +25,14 @@ const getFontAwesomeIcon = (icon: IconString): IconProp => {
             return faMedium;
         case "js":
             return faJs;
+        case "android":
+            return faAndroid;
+        case "php":
+            return faPhp;
+        case "java":
+            return faJava;
+        case "nodeJs":
+            return faNodeJs;
     }
 }
 
