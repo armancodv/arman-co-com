@@ -1,8 +1,13 @@
+@import "../variables";
 .skill-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: center;
+  background: $primary;
+  border: 1px $primaryBorder solid;
+  border-radius: 4px;
+  padding: 2px 8px;
   margin: 0 16px 0 0;
   &-progress {
     width: 20px;

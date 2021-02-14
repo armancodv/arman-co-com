@@ -21,15 +21,15 @@ const SkillItem: React.FC<SkillItemProps> = (props) => {
                                          strokeLinecap: 'butt',
                                          pathTransitionDuration: 1,
                                          pathColor: `#7c9a8e`,
-                                         trailColor: '#eeeeee',
+                                         trailColor: '#ABCBBE',
                                      })}
                 />
             </div>
             <div className="skill-item-title">
                 {props?.skill?.name}
             </div>
-            {props?.skill?.icon ? <FontAwesomeIcon className="skill-item-icon" icon={getFontAwesomeIcon(props?.skill?.icon)} color="#ABCBBE" size="lg"/> : null}
-            {props?.skill?.hasBadge ? <FontAwesomeIcon className="skill-item-badge" icon={faStar} color="#ABCBBE" size="xs"/> : null}
+            {props?.skill?.icon ? <FontAwesomeIcon className="skill-item-icon" icon={getFontAwesomeIcon(props?.skill?.icon)} color="#444444" size="1x"/> : null}
+            {props?.skill?.hasBadge ? <FontAwesomeIcon className="skill-item-badge" icon={faStar} color="#7c9a8e" size="xs"/> : null}
         </div>
     );
 }
