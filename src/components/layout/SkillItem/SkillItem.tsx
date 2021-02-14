@@ -13,7 +13,7 @@ interface SkillItemProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const SkillItem: React.FC<SkillItemProps> = (props) => {
     return (
-        <div {...props} className="skill-item">
+        <div className="skill-item">
             <div className="skill-item-progress">
                 <CircularProgressbar value={props?.skill?.percentage}
                                      strokeWidth={12}

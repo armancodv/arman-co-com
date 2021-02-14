@@ -9,9 +9,9 @@ interface ExperienceItemProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
     return (
-        <div {...props} className="experience-item">
+        <div className="experience-item">
             <div className="experience-item-avatar">
-                <Image className="image" src={props.experience?.company?.image} />
+                <Image className="image" src={props.experience?.company?.image} rounded={true} />
             </div>
             <div className="experience-item-details">
                 <h3 className="experience-item-title">{props.experience?.title}</h3>

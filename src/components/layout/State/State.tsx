@@ -23,7 +23,7 @@ const State: React.FC<FetchStateProps> = (props) => {
         }
     }
     return (
-        <div {...props} className="state">
+        <div className="state">
             {showState(props?.fetchState ?? FetchState.INIT)}
         </div>
     );
