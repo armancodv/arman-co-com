@@ -6,6 +6,7 @@ import './Experience.scss';
 
 const Experience: React.FC = () => {
     const experienceList = useSelector(experienceSelectors.getExperience);
+    if(!experienceList || !experienceList.length) return null;
     return (
         <div className="experience">
             <h2>Experience</h2>

@@ -1,4 +1,4 @@
-const BASE = process?.env?.REACT_APP_API_BASE_URL || 'http://localhost:3000';
+const BASE = process?.env?.REACT_APP_API_BASE_URL;
 const getProfile = `${BASE}/profile.json`;
 const getSkills = `${BASE}/skills.json`;
 const getExperience = `${BASE}/experience.json`;

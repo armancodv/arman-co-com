@@ -6,6 +6,7 @@ import './Skills.scss';
 
 const Skills: React.FC = () => {
     const skills = useSelector(skillsSelectors.getSkills);
+    if(!skills || !skills.length) return null;
     return (
         <div className="skills">
             <h2>Skills</h2>
