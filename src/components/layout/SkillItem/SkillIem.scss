@@ -8,7 +8,7 @@
   border: 1px $primaryBorder solid;
   border-radius: 4px;
   padding: 2px 8px;
-  margin: 0 16px 0 0;
+  margin: 2px 8px 2px 0;
   &-progress {
     width: 20px;
     height: 28px;
@@ -21,5 +21,11 @@
   }
   &-title {
     margin-left: 4px;
+  }
+}
+
+@media (max-width: $max-md) {
+  .skill-item {
+    margin: 2px 4px 2px 0;
   }
 }
