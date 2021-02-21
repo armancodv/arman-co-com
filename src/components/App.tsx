@@ -7,10 +7,14 @@ import experienceActions from "../redux/experience/experienceActions";
 import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "./layout/SideBar/SideBar";
 import Content from "./layout/Content/Content";
+import ReactGA from 'react-ga';
+import {GOOGLE_ANALYTICS_ID} from "../config/config";
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
+
     useEffect(()=>{
+        ReactGA.initialize(GOOGLE_ANALYTICS_ID);
         dispatch(profileActions.fetchProfile())
         dispatch(skillsActions.fetchSkills())
         dispatch(experienceActions.fetchExperience())
