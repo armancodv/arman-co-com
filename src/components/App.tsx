@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.scss';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import profileActions from "../redux/profile/profileActions";
 import skillsActions from "../redux/skills/skillsActions";
 import experienceActions from "../redux/experience/experienceActions";
@@ -9,16 +9,23 @@ import SideBar from "./layout/SideBar/SideBar";
 import Content from "./layout/Content/Content";
 import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS_ID} from "../config/config";
+import routerSelectors from "../redux/router/routerSelectors";
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
+    const pathname = useSelector(routerSelectors.getPathname)
 
     useEffect(()=>{
         ReactGA.initialize(GOOGLE_ANALYTICS_ID);
         dispatch(profileActions.fetchProfile())
         dispatch(skillsActions.fetchSkills())
         dispatch(experienceActions.fetchExperience())
-    }, [dispatch])
+    }, [dispatch]);
+
+    useEffect(()=>{
+        ReactGA.pageview(pathname);
+    }, [pathname]);
+
     return (
         <Container fluid className="app">
             <Row>
