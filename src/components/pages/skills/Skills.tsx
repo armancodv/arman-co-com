@@ -8,12 +8,12 @@ const Skills: React.FC = () => {
     const skills = useSelector(skillsSelectors.getSkills);
     if(!skills || !skills.length) return null;
     return (
-        <div className="skills">
+        <section className="skills">
             <h2>Skills</h2>
             <div className="skills-container">
                 {skills.map((skill) => <SkillItem key={skill?.id} skill={skill} />)}
             </div>
-        </div>
+        </section>
     )
 }
 

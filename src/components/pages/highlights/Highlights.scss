@@ -1,0 +1,14 @@
+.highlights {
+  width: 100%;
+  padding: 16px 16px 8px;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
