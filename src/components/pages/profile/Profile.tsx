@@ -10,7 +10,7 @@ const Profile: React.FC = () => {
     const fullName = useSelector(profileSelectors.getFullName);
     const description = useSelector(profileSelectors.getDescription);
     return (
-        <div className="profile">
+        <section className="profile">
             {fetchState !== FetchState.SUCCESS ? (
                 <State variant="dark" fetchState={fetchState}/>
             ) : (
@@ -20,7 +20,7 @@ const Profile: React.FC = () => {
                 </>
             )
             }
-        </div>
+        </section>
     );
 }
 

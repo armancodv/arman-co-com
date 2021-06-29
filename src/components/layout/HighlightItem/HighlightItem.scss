@@ -1,0 +1,76 @@
+@import "src/components/layout/variables";
+.highlight-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+
+  &-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 4px;
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 8px 0 0;
+  }
+
+  &-description {
+    text-align: justify;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-tag {
+    &-groups {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 4px 0 0;
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 4px 0 0;
+
+      &:not(:last-child)::after {
+        content: '|';
+        margin-right: 6px;
+        color: $gray-500;
+      }
+
+      &-title {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 0 8px 0 0;
+      }
+
+      &-tag {
+        margin: 2px 8px 2px 0;
+      }
+
+    }
+  }
+
+  &-links {
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  &-link {
+    margin: 0 5px 0 0;
+  }
+}

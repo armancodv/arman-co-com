@@ -8,12 +8,12 @@ const Experience: React.FC = () => {
     const experienceList = useSelector(experienceSelectors.getExperience);
     if(!experienceList || !experienceList.length) return null;
     return (
-        <div className="experience">
+        <section className="experience">
             <h2>Experience</h2>
             <div className="experience-container">
                 {experienceList?.map((experience) => <ExperienceItem experience={experience}/>)}
             </div>
-        </div>
+        </section>
     )
 }
 
