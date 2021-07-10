@@ -36,6 +36,22 @@
       margin: 8px;
     }
   }
+
+  .qr-code {
+    margin-top: 12px;
+    @media (max-width: $max-sm) {
+      display: none;
+    }
+  }
+
+  .print {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    @media print {
+      display: none;
+    }
+  }
+
   @media (max-width: $max-md) {
     .badge {
       align-self: center;

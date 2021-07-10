@@ -30,7 +30,7 @@ const App: React.FC = () => {
 
     return (
         <Container fluid className="app">
-            <Row>
+            <Row className="app-row">
                 <Col md={3} lg={2} className="app-side-bar">
                     <SideBar />
                 </Col>
