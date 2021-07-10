@@ -15,6 +15,9 @@ export type ProfileResponse = {
     nickName?: string;
     title: string;
     location?: string;
+    yearOfBirth?: number;
+    email?: string;
+    url?: string;
     description?: string;
     image?: string;
     social?: Social[];

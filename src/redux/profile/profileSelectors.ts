@@ -9,6 +9,10 @@ const profileSelectors = {
     getDescription: (state: State): string => state?.profile?.data?.description ?? '',
     getSocial: (state: State): Social[] => state?.profile?.data?.social ?? [],
     getFetchState: (state: State): FetchState => state?.profile?.dataState ?? FetchState.INIT,
+    getLocation: (state: State): string => state?.profile?.data?.location ?? '',
+    getYearOfBirth: (state: State): number => state?.profile?.data?.yearOfBirth ?? 0,
+    getEmail: (state: State): string => state?.profile?.data?.email ?? '',
+    getUrl: (state: State): string => state?.profile?.data?.url ?? '',
 }
 
 export default profileSelectors

@@ -1,15 +1,16 @@
 import React from "react";
+import QRCode from "react-qr-code";
 import Avatar from "../Avatar/Avatar";
 import './SideBar.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useSelector} from "react-redux";
 import profileSelectors from "../../../redux/profile/profileSelectors";
-import {Badge} from "react-bootstrap";
-import {IconProp} from "@fortawesome/fontawesome-svg-core";
-import {faGithub, faLinkedin, faMedium, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {Badge, Button} from "react-bootstrap";
 import {FetchState} from "../../../redux/models_d";
 import State from "../State/State";
 import getFontAwesomeIcon from "../../../utils/getFontAwesomeIcon";
+import {REACT_APP_APP_BASE_URL} from "../../../config/config";
+import {faPrint} from "@fortawesome/free-solid-svg-icons";
 
 const SideBar: React.FC = () => {
     const fetchState = useSelector(profileSelectors.getFetchState)
@@ -34,6 +35,14 @@ const SideBar: React.FC = () => {
                                 <FontAwesomeIcon icon={getFontAwesomeIcon(item?.icon)} color="#eeeeee" size="2x"/>
                             </a>
                         ))}
+                    </div>
+                    <div className="print">
+                        <Button variant="primary" onClick={() => {window.print();}}>
+                            <FontAwesomeIcon icon={faPrint}/> Print CV
+                        </Button>
+                    </div>
+                    <div className="qr-code">
+                        <QRCode value={REACT_APP_APP_BASE_URL} size={128} bgColor="transparent" fgColor="#7c9a8e"/>
                     </div>
                 </>
             )}
