@@ -9,8 +9,8 @@ interface HighlightItemProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const HighlightItem: React.FC<HighlightItemProps> = (props) => {
     return (
-        <li className="highlight-item">
-            <article>
+        <li>
+            <article className="highlight-item">
                 <div className="highlight-item-top">
                     <h3 className="highlight-item-title">{props.highlight?.title}</h3>
                 </div>

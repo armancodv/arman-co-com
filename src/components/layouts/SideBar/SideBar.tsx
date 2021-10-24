@@ -1,13 +1,13 @@
 import React from "react";
 import QRCode from "react-qr-code";
-import Avatar from "../Avatar/Avatar";
+import Avatar from "../../items/Avatar/Avatar";
 import './SideBar.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useSelector} from "react-redux";
 import profileSelectors from "../../../redux/profile/profileSelectors";
 import {Badge, Button} from "react-bootstrap";
 import {FetchState} from "../../../redux/models_d";
-import State from "../State/State";
+import State from "../../items/State/State";
 import getFontAwesomeIcon from "../../../utils/getFontAwesomeIcon";
 import {REACT_APP_APP_BASE_URL} from "../../../config/config";
 import {faPrint} from "@fortawesome/free-solid-svg-icons";
@@ -20,7 +20,7 @@ const SideBar: React.FC = () => {
     const image = useSelector(profileSelectors.getImage)
     const social = useSelector(profileSelectors.getSocial)
     return (
-        <div className="side-bar">
+        <aside className="side-bar">
             {fetchState !== FetchState.SUCCESS ? (
                 <State variant="primary" fetchState={fetchState}/>
             ) : (
@@ -46,7 +46,7 @@ const SideBar: React.FC = () => {
                     </div>
                 </>
             )}
-        </div>
+        </aside>
     );
 }
 

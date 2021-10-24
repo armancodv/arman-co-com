@@ -1,7 +1,7 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import experienceSelectors from "../../../redux/experience/experienceSelectors";
-import ExperienceItem from "../../layout/ExperienceItem/ExperienceItem";
+import ExperienceItem from "../../items/ExperienceItem/ExperienceItem";
 import './Experience.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBriefcase} from "@fortawesome/free-solid-svg-icons";
@@ -15,9 +15,9 @@ const Experience: React.FC = () => {
                 <FontAwesomeIcon icon={faBriefcase} className="highlights-title-icon"/>
                 Experience
             </h2>
-            <div className="experience-container">
+            <ul className="experience-container">
                 {experienceList?.map((experience) => <ExperienceItem experience={experience}/>)}
-            </div>
+            </ul>
         </section>
     )
 }
