@@ -1,5 +1,5 @@
 import {FetchState, State} from "../models_d";
-import {Social} from "./models_d";
+import {Publication, Social} from "./models_d";
 
 const profileSelectors = {
     getFullName: (state: State): string => `${state?.profile?.data?.firstName ?? ''} ${state?.profile?.data?.lastName ?? ''}`,
@@ -13,6 +13,7 @@ const profileSelectors = {
     getYearOfBirth: (state: State): number => state?.profile?.data?.yearOfBirth ?? 0,
     getEmail: (state: State): string => state?.profile?.data?.email ?? '',
     getUrl: (state: State): string => state?.profile?.data?.url ?? '',
+    getPublications: (state: State): Publication[] => state?.profile?.data?.publications ?? [],
 }
 
 export default profileSelectors
