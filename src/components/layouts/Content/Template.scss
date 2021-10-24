@@ -1,0 +1,14 @@
+@import "src/components/layouts/variables";
+.template {
+  &-header {
+    background: $primary;
+  }
+  &-footer {
+    background: $gray-300;
+  }
+  &-container {
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: auto;
+  }
+}

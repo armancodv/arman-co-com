@@ -24,6 +24,14 @@ export type Education = {
     duration: string;
 }
 
+export type Footer = {
+    pageSource: string;
+    github: string;
+    googlePlay: string;
+    medium: string;
+    linkedin: string;
+}
+
 export type ProfileResponse = {
     id: string;
     firstName: string;
@@ -39,6 +47,7 @@ export type ProfileResponse = {
     social?: Social[];
     publications?: Publication[];
     education?: Education[];
+    footer?: Footer;
 }
 export type ProfileState = {
     data: ProfileResponse;

@@ -5,7 +5,7 @@ import './Profile.scss'
 import {FetchState} from "../../../redux/models_d";
 import State from "../../items/State/State";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCalendar, faEnvelope, faGlobe, faMapMarker} from "@fortawesome/free-solid-svg-icons";
+import {faCalendar, faEnvelope, faGlobe, faHighlighter, faMapMarker, faUser} from "@fortawesome/free-solid-svg-icons";
 
 const Profile: React.FC = () => {
     const fetchState = useSelector(profileSelectors.getFetchState);
@@ -21,7 +21,10 @@ const Profile: React.FC = () => {
                 <State variant="dark" fetchState={fetchState}/>
             ) : (
                 <>
-                    <h3>{fullName}</h3>
+                    <h2 className="profile-contacts-title">
+                        <FontAwesomeIcon icon={faUser} className="highlights-title-icon"/>
+                        {fullName}
+                    </h2>
                     <div className="profile-contacts-container">
                         <div className="profile-contacts-item">
                             <FontAwesomeIcon icon={faMapMarker} color="#7c9a8e" /> {location}
