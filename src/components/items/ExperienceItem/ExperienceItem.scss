@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   padding: 12px 0 12px 0;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px dotted $gray-300;
   &-avatar {
     padding: 0 12px 4px 0;
     .image {

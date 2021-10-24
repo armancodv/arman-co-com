@@ -8,6 +8,14 @@ export type Social = {
     link: string;
 }
 
+export type Publication = {
+    id: string;
+    title: string;
+    journal: string;
+    date: string;
+    link: string;
+}
+
 export type ProfileResponse = {
     id: string;
     firstName: string;
@@ -21,6 +29,7 @@ export type ProfileResponse = {
     description?: string;
     image?: string;
     social?: Social[];
+    publications?: Publication[];
 }
 export type ProfileState = {
     data: ProfileResponse;
