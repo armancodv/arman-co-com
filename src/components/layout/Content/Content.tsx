@@ -1,6 +1,5 @@
 import React from "react";
 import Profile from "../../pages/profile/Profile";
-import Skills from "../../pages/skills/Skills";
 import Experience from "../../pages/experience/Experience";
 import Highlights from "../../pages/highlights/Highlights";
 
@@ -9,7 +8,6 @@ const Content: React.FC = () => {
         <div>
             <Profile />
             <Highlights />
-            <Skills />
             <Experience />
         </div>
     )

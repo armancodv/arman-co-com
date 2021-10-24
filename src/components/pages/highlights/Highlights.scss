@@ -1,6 +1,8 @@
+@import "src/components/layout/variables";
 .highlights {
   width: 100%;
   padding: 16px 16px 8px;
+  border-bottom: 1px solid $gray-300;
   &-container {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,12 @@
     padding: 0;
     margin: 0;
   }
-  h2 {
-    font-size: 24px;
+  &-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 16px 0 8px;
+    &-icon {
+      margin-right: 8px;
+    }
   }
 }
