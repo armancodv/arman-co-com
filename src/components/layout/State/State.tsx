@@ -4,7 +4,7 @@ import {Spinner} from "react-bootstrap";
 import {Variant} from "react-bootstrap/types";
 import {FetchState} from "../../../redux/models_d";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faExclamation, faExclamationTriangle} from "@fortawesome/free-solid-svg-icons";
+import {faExclamationTriangle} from "@fortawesome/free-solid-svg-icons";
 
 interface FetchStateProps extends React.HTMLAttributes<HTMLDivElement> {
     fetchState?: FetchState,

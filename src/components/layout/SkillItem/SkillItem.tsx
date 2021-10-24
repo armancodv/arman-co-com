@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import './SkillIem.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import getFontAwesomeIcon from "../../../utils/getFontAwesomeIcon";
-import {faCertificate, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 
 interface SkillItemProps extends React.HTMLAttributes<HTMLDivElement> {
     skill: Skill;

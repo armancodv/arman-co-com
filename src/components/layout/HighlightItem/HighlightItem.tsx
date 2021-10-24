@@ -1,7 +1,7 @@
 import React from "react";
 import {Highlight} from "../../../redux/highlights/models_d";
 import './HighlightItem.scss';
-import {Badge, Button, Image} from "react-bootstrap";
+import {Badge, Button} from "react-bootstrap";
 
 interface HighlightItemProps extends React.HTMLAttributes<HTMLDivElement> {
     highlight: Highlight;
