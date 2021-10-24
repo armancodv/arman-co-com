@@ -1,0 +1,30 @@
+@import "src/components/layouts/variables";
+.education-item {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 0 12px 0;
+  border-bottom: 1px dotted $gray-300;
+  &-avatar {
+    padding: 0 12px 4px 0;
+    .image {
+      width: 64px;
+    }
+  }
+  &-details {
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 20px;
+      margin: 0;
+    }
+    p {
+      line-height: 20px;
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &-duration {
+    color: $gray-600;
+  }
+}

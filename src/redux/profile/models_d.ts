@@ -16,6 +16,14 @@ export type Publication = {
     link: string;
 }
 
+export type Education = {
+    id: string;
+    level: string;
+    university: string;
+    image: string;
+    duration: string;
+}
+
 export type ProfileResponse = {
     id: string;
     firstName: string;
@@ -30,6 +38,7 @@ export type ProfileResponse = {
     image?: string;
     social?: Social[];
     publications?: Publication[];
+    education?: Education[];
 }
 export type ProfileState = {
     data: ProfileResponse;
