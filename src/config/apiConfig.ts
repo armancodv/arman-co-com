@@ -3,12 +3,14 @@ const getProfile = `${BASE}/profile.json`;
 const getSkills = `${BASE}/skills.json`;
 const getExperience = `${BASE}/experience.json`;
 const getHighlights = `${BASE}/highlights.json`;
+const getPortfolios = `${BASE}/portfolio.json`;
 const apiConfig = {
     BASE,
     getProfile,
     getSkills,
     getExperience,
-    getHighlights
+    getHighlights,
+    getPortfolios
 }
 
 export default apiConfig;

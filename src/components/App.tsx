@@ -10,6 +10,7 @@ import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS_ID} from "../config/config";
 import routerSelectors from "../redux/router/routerSelectors";
 import highlightsActions from "../redux/highlights/highlightsActions";
+import portfoliosActions from "../redux/portfolio/portfolioActions";
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         dispatch(profileActions.fetchProfile())
         dispatch(experienceActions.fetchExperience())
         dispatch(highlightsActions.fetchHighlights())
+        dispatch(portfoliosActions.fetchPortfolios())
     }, [dispatch]);
 
     useEffect(()=>{
