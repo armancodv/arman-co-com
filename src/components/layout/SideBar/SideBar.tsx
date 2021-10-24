@@ -31,7 +31,7 @@ const SideBar: React.FC = () => {
                     <h2>{title}</h2>
                     <div className="social">
                         {social.map((item) => (
-                            <a href={item?.link} target="_blank" key={item?.id}>
+                            <a href={item?.link} target="_blank" key={item?.id} rel="noreferrer">
                                 <FontAwesomeIcon icon={getFontAwesomeIcon(item?.icon)} color="#eeeeee" size="2x"/>
                             </a>
                         ))}
