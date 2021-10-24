@@ -1,19 +1,14 @@
 @import "src/components/layouts/variables";
-.profile {
+.footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 8px 0;
-  color: $dark;
-
+  padding: 32px 0;
   &-contacts {
     &-title {
       font-size: 18px;
       font-weight: bold;
-      margin: 16px 0 8px;
-      &-icon {
-        margin-right: 8px;
-      }
+      text-align: center;
     }
     &-container {
       font-size: 14px;
@@ -22,6 +17,7 @@
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 8px;
+      justify-content: center;
     }
     &-item {
       margin-right: 24px;
@@ -40,5 +36,20 @@
       }
     }
   }
-
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 16px -4px;
+  }
+  &-button {
+    margin: 2px 4px;
+    width: 100%;
+    max-width: 300px;
+    &-icon {
+      margin-right: 8px;
+    }
+  }
 }
