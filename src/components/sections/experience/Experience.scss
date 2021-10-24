@@ -1,14 +1,13 @@
-@import "src/components/layout/variables";
-.highlights {
+.experience {
   width: 100%;
   padding: 16px 16px 8px;
-  border-bottom: 1px solid $gray-300;
   &-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
+    list-style-type: none;
   }
   &-title {
     font-size: 22px;

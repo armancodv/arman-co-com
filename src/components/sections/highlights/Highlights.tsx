@@ -2,7 +2,7 @@ import React from "react";
 import {useSelector} from "react-redux";
 import './Highlights.scss';
 import highlightsSelectors from "../../../redux/highlights/highlightsSelectors";
-import HighlightItem from "../../layout/HighlightItem/HighlightItem";
+import HighlightItem from "../../items/HighlightItem/HighlightItem";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHighlighter} from "@fortawesome/free-solid-svg-icons";
 

@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import profileSelectors from "../../../redux/profile/profileSelectors";
 import './Profile.scss'
 import {FetchState} from "../../../redux/models_d";
-import State from "../../layout/State/State";
+import State from "../../items/State/State";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faEnvelope, faGlobe, faMapMarker} from "@fortawesome/free-solid-svg-icons";
 
