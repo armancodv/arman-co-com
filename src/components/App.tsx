@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import './App.scss';
 import {useDispatch, useSelector} from "react-redux";
 import profileActions from "../redux/profile/profileActions";
-import skillsActions from "../redux/skills/skillsActions";
 import experienceActions from "../redux/experience/experienceActions";
 import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "./layout/SideBar/SideBar";
@@ -19,7 +18,6 @@ const App: React.FC = () => {
     useEffect(()=>{
         ReactGA.initialize(GOOGLE_ANALYTICS_ID);
         dispatch(profileActions.fetchProfile())
-        dispatch(skillsActions.fetchSkills())
         dispatch(experienceActions.fetchExperience())
         dispatch(highlightsActions.fetchHighlights())
     }, [dispatch]);
