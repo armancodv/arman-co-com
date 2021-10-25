@@ -34,6 +34,9 @@ const Footer: React.FC = () => {
                     </a>
                 </div>
             </div>
+            <div className="footer-note">
+                Visit my linkedin page to see my recommendations
+            </div>
             <div className="footer-buttons">
                 <Button variant="secondary" className="footer-button" size="sm" href={footer?.pageSource} target="_blank">
                     <FontAwesomeIcon icon={faGithub} className="footer-button-icon"/>

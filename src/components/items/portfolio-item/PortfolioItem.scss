@@ -17,6 +17,12 @@
     font-weight: bold;
     line-height: 24px;
     margin: 0 8px 0 0;
+    &-icon-left {
+      margin-right: 8px;
+    }
+    &-icon-right {
+      margin-left: 8px;
+    }
   }
 
   &-description {
@@ -35,6 +41,15 @@
     margin: 4px;
     @media print {
       border: none;
+    }
+  }
+
+  &-link {
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      color: $dark;
+      text-decoration: none;
     }
   }
 }

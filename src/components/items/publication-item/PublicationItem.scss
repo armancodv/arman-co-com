@@ -1,8 +1,6 @@
 @import "src/components/layouts/variables";
 
 .publication-item {
-  display: flex;
-  flex-direction: column;
   padding: 12px 0 12px 0;
 
   h3 {
@@ -17,5 +15,28 @@
     font-size: 14px;
     padding: 0;
     margin: 0;
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      color: $dark;
+      text-decoration: none;
+    }
+  }
+
+  &-title {
+    flex: 100%;
+    &-icon {
+      margin-right: 8px;
+    }
+  }
+
+  &-journal:after {
+    content: ' |';
   }
 }
