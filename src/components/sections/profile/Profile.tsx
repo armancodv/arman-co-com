@@ -5,7 +5,7 @@ import './Profile.scss'
 import {FetchState} from "../../../redux/models_d";
 import State from "../../items/State/State";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCalendar, faEnvelope, faGlobe, faHighlighter, faMapMarker, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faCalendar, faEnvelope, faGlobe, faMapMarker, faUser} from "@fortawesome/free-solid-svg-icons";
 
 const Profile: React.FC = () => {
     const fetchState = useSelector(profileSelectors.getFetchState);

@@ -6,6 +6,16 @@ body {
   -webkit-print-color-adjust: exact !important;
 }
 
+@media print {
+  a:link {
+    border-bottom: none !important;
+    text-decoration: none !important;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+}
+
 .app {
   &-side-bar, &-content {
     height: $viewHeight;

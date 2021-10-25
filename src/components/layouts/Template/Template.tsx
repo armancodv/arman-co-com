@@ -21,8 +21,8 @@ const Template: React.FC = () => {
                     <Highlights/>
                     <Experience/>
                     <Portfolios/>
-                    <Publications/>
                     <Education/>
+                    <Publications/>
                 </div>
             </main>
             <footer className="template-footer">

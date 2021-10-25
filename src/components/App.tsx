@@ -5,7 +5,7 @@ import profileActions from "../redux/profile/profileActions";
 import experienceActions from "../redux/experience/experienceActions";
 import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "./layouts/SideBar/SideBar";
-import Template from "./layouts/Content/Template";
+import Template from "./layouts/Template/Template";
 import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS_ID} from "../config/config";
 import routerSelectors from "../redux/router/routerSelectors";
