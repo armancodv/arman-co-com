@@ -3,20 +3,25 @@ import './App.scss';
 import {useDispatch, useSelector} from "react-redux";
 import profileActions from "../redux/profile/profileActions";
 import experienceActions from "../redux/experience/experienceActions";
-import {Col, Container, Row} from "react-bootstrap";
-import SideBar from "./layouts/SideBar/SideBar";
-import Template from "./layouts/Template/Template";
 import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS_ID} from "../config/config";
 import routerSelectors from "../redux/router/routerSelectors";
 import highlightsActions from "../redux/highlights/highlightsActions";
 import portfoliosActions from "../redux/portfolio/portfolioActions";
+import Profile from "./sections/profile/Profile";
+import Highlights from "./sections/highlights/Highlights";
+import Experience from "./sections/experience/Experience";
+import Portfolios from "./sections/portfolios/Portfolios";
+import Education from "./sections/education/Education";
+import Publications from "./sections/publications/Publications";
+import Footer from "./sections/footer/Footer";
+import {Col, Container, Row} from "react-bootstrap";
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
     const pathname = useSelector(routerSelectors.getPathname)
 
-    useEffect(()=>{
+    useEffect(() => {
         ReactGA.initialize(GOOGLE_ANALYTICS_ID);
         dispatch(profileActions.fetchProfile())
         dispatch(experienceActions.fetchExperience())
@@ -24,21 +29,44 @@ const App: React.FC = () => {
         dispatch(portfoliosActions.fetchPortfolios())
     }, [dispatch]);
 
-    useEffect(()=>{
+    useEffect(() => {
         ReactGA.pageview(pathname);
     }, [pathname]);
 
     return (
-        <Container fluid className="app">
-            <Row className="app-row">
-                <Col md={3} lg={2} className="app-side-bar">
-                    <SideBar />
-                </Col>
-                <Col md={9} lg={10} className="app-content">
-                    <Template />
-                </Col>
-            </Row>
-        </Container>
+        <div className="app">
+            <header className="app-header">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Profile/>
+                        </Col>
+                    </Row>
+                </Container>
+            </header>
+            <main className="app-main">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Highlights/>
+                            <Experience/>
+                            <Portfolios/>
+                            <Education/>
+                            <Publications/>
+                        </Col>
+                    </Row>
+                </Container>
+            </main>
+            <footer className="app-footer">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Footer/>
+                        </Col>
+                    </Row>
+                </Container>
+            </footer>
+        </div>
     );
 }
 

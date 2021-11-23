@@ -17,24 +17,10 @@ body {
 }
 
 .app {
-  &-side-bar, &-content {
-    height: $viewHeight;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 0;
-    @include media-breakpoint-between(xs, sm) {
-      height: auto;
-      overflow: hidden;
-    }
-    @media print {
-      height: 100%;
-      min-height: $viewHeight;
-      overflow-y: hidden;
-      overflow-x: hidden;
-    }
+  &-header {
+    background: $primary;
   }
-
-  &-side-bar {
-    background: $dark;
+  &-footer {
+    background: $gray-300;
   }
 }
