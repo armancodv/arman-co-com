@@ -29,5 +29,12 @@ $max-sm: 767px;
 $max-md: 991px;
 $max-lg: 1199px;
 
+$container-max-widths: (
+        sm: 1200px,
+        md: 1200px,
+        lg: 1200px,
+        xl: 1200px
+) !default;
+
 // fonts
 $font-family-default: "Andika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;

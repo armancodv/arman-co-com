@@ -1,16 +1,29 @@
 @import "src/components/layouts/variables";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/mixins/breakpoints";
 .profile {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   padding: 8px 0;
   color: $dark;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
 
   &-contacts {
+    @include media-breakpoint-up(sm) {
+      padding-left: 24px;
+    }
     &-title {
-      font-size: 18px;
+      font-size: 32px;
       font-weight: bold;
       margin: 16px 0 8px;
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+
       &-icon {
         margin-right: 8px;
       }
@@ -22,9 +35,16 @@
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 8px;
+      @include media-breakpoint-down(sm) {
+        justify-content: center;
+      }
     }
     &-item {
       margin-right: 24px;
+      @include media-breakpoint-down(sm) {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
       a {
         text-decoration: none;
         color: $dark;
@@ -41,4 +61,7 @@
     }
   }
 
+  &-description {
+    text-align: justify;
+  }
 }
