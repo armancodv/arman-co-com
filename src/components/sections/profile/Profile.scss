@@ -14,7 +14,7 @@
 
   &-contacts {
     @include media-breakpoint-up(sm) {
-      padding-left: 24px;
+      padding: 0 12px;
     }
     &-title {
       font-size: 32px;
@@ -28,6 +28,12 @@
         margin-right: 8px;
       }
     }
+    &-subtitle {
+      color: $primaryDarker;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 8px 0 8px;
+    }
     &-container {
       font-size: 14px;
       display: flex;
@@ -40,10 +46,9 @@
       }
     }
     &-item {
-      margin-right: 24px;
+      margin: 2px 24px 2px 0;
       @include media-breakpoint-down(sm) {
-        margin-left: 12px;
-        margin-right: 12px;
+        margin: 2px 12px;
       }
       a {
         text-decoration: none;
@@ -63,5 +68,26 @@
 
   &-description {
     text-align: justify;
+  }
+
+  &-print {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qr-code {
+    margin-top: 12px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .print {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    @media print {
+      display: none;
+    }
   }
 }
