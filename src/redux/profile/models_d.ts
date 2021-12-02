@@ -1,4 +1,4 @@
-import {FetchState} from "../models_d";
+import {FetchState, TagGroup} from "../models_d";
 import {IconString} from "../../utils/getFontAwesomeIcon";
 
 export type Social = {
@@ -48,6 +48,7 @@ export type ProfileResponse = {
     publications?: Publication[];
     education?: Education[];
     footer?: Footer;
+    skills?: TagGroup[];
 }
 export type ProfileState = {
     data: ProfileResponse;

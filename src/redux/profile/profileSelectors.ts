@@ -1,4 +1,4 @@
-import {FetchState, State} from "../models_d";
+import {FetchState, State, TagGroup} from "../models_d";
 import {Education, Footer, Publication, Social} from "./models_d";
 
 const profileSelectors = {
@@ -16,6 +16,7 @@ const profileSelectors = {
     getPublications: (state: State): Publication[] => state?.profile?.data?.publications ?? [],
     getEducation: (state: State): Education[] => state?.profile?.data?.education ?? [],
     getFooter: (state: State): Footer | undefined => state?.profile?.data?.footer,
+    getSkills: (state: State): TagGroup[] | undefined => state?.profile?.data?.skills,
 }
 
 export default profileSelectors

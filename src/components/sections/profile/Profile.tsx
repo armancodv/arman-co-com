@@ -5,7 +5,7 @@ import './Profile.scss'
 import {FetchState} from "../../../redux/models_d";
 import State from "../../items/State/State";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCalendar, faEnvelope, faGlobe, faMapMarker, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faCalendar, faEnvelope, faGlobe, faMapMarker} from "@fortawesome/free-solid-svg-icons";
 import Avatar from "../../items/Avatar/Avatar";
 import getFontAwesomeIcon from "../../../utils/getFontAwesomeIcon";
 import {Button} from "react-bootstrap";
