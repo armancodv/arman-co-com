@@ -16,6 +16,7 @@ import Education from "./sections/education/Education";
 import Publications from "./sections/publications/Publications";
 import Footer from "./sections/footer/Footer";
 import {Col, Container, Row} from "react-bootstrap";
+import Skills from "./sections/skills/Skills";
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
@@ -44,19 +45,24 @@ const App: React.FC = () => {
                     </Row>
                 </Container>
             </header>
-            <main className="app-main">
-                <Container>
-                    <Row>
-                        <Col>
+            <Container>
+                <Row>
+                    <Col sm={8}>
+                        <main className="app-main">
                             <Highlights/>
                             <Experience/>
                             <Portfolios/>
                             <Education/>
                             <Publications/>
-                        </Col>
-                    </Row>
-                </Container>
-            </main>
+                        </main>
+                    </Col>
+                    <Col sm={4}>
+                        <aside>
+                            <Skills/>
+                        </aside>
+                    </Col>
+                </Row>
+            </Container>
             <footer className="app-footer">
                 <Container>
                     <Row>
