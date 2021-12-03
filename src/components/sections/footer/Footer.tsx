@@ -4,16 +4,16 @@ import {Button} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faGooglePlay, faLinkedin, faMedium} from "@fortawesome/free-brands-svg-icons";
 import {faCalendar, faDownload, faEnvelope, faGlobe, faMapMarker} from "@fortawesome/free-solid-svg-icons";
-import {useSelector} from "react-redux";
 import profileSelectors from "../../../redux/profile/profileSelectors";
+import {useAppSelector} from "../../../redux/hooks";
 
 const Footer: React.FC = () => {
-    const footer = useSelector(profileSelectors.getFooter)
-    const fullName = useSelector(profileSelectors.getFullName);
-    const location = useSelector(profileSelectors.getLocation)
-    const yearOfBirth = useSelector(profileSelectors.getYearOfBirth)
-    const email = useSelector(profileSelectors.getEmail)
-    const url = useSelector(profileSelectors.getUrl)
+    const footer = useAppSelector(profileSelectors.getFooter)
+    const fullName = useAppSelector(profileSelectors.getFullName);
+    const location = useAppSelector(profileSelectors.getLocation)
+    const yearOfBirth = useAppSelector(profileSelectors.getYearOfBirth)
+    const email = useAppSelector(profileSelectors.getEmail)
+    const url = useAppSelector(profileSelectors.getUrl)
     if(!footer) return null
     return (
         <div className="footer">

@@ -25,7 +25,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
                     <p className="portfolio-item-description">{props.portfolio?.description}</p>
                     <div className="portfolio-item-tags">
                         {props.portfolio?.tags?.map((tag) => (
-                            <Badge variant="secondary" className="portfolio-item-tag">{tag}</Badge>
+                            <Badge className="portfolio-item-tag">{tag}</Badge>
                         ))}
                     </div>
                 </article>

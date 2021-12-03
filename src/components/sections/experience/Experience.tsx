@@ -1,13 +1,13 @@
 import React from "react";
-import {useSelector} from "react-redux";
 import experienceSelectors from "../../../redux/experience/experienceSelectors";
 import ExperienceItem from "../../items/ExperienceItem/ExperienceItem";
 import './Experience.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBriefcase} from "@fortawesome/free-solid-svg-icons";
+import {useAppSelector} from "../../../redux/hooks";
 
 const Experience: React.FC = () => {
-    const experienceList = useSelector(experienceSelectors.getExperience);
+    const experienceList = useAppSelector(experienceSelectors.getExperience);
     if(!experienceList || !experienceList.length) return null;
     return (
         <section className="experience">

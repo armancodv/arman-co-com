@@ -1,13 +1,13 @@
 import React from "react";
 import './Skills.scss'
 import {Badge} from "react-bootstrap";
-import {useSelector} from "react-redux";
 import profileSelectors from "../../../redux/profile/profileSelectors";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHighlighter} from "@fortawesome/free-solid-svg-icons";
+import {useAppSelector} from "../../../redux/hooks";
 
 const Skills: React.FC = () => {
-    const skills = useSelector(profileSelectors.getSkills)
+    const skills = useAppSelector(profileSelectors.getSkills)
 
     return (
         <section className="skills">
@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
                     <div className="skills-tag-group">
                         <h4 className="skills-tag-group-title">{tagGroup?.title}</h4>
                         {tagGroup?.tags?.map((tag) => (
-                            <Badge variant="success" className="skills-tag-group-tag">{tag}</Badge>
+                            <Badge className="skills-tag-group-tag">{tag}</Badge>
                         ))}
                     </div>
                 ))}

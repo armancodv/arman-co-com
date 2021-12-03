@@ -1,14 +1,24 @@
+import { configureStore } from '@reduxjs/toolkit';
+import profileReducers from "./profile/profileReducers";
+import experienceReducers from "./experience/experienceReducers";
+import highlightsReducers from "./highlights/highlightsReducers";
+import portfoliosReducers from "./portfolio/portfolioReducers";
 import createSagaMiddleware from 'redux-saga';
-import {applyMiddleware, createStore, Store} from "redux";
-import {composeWithDevTools} from 'redux-devtools-extension'
-import { createBrowserHistory } from 'history'
-import { routerMiddleware } from 'connected-react-router'
-import reducers from "./reducers";
 import saga from "./saga";
-export const history = createBrowserHistory()
 
 const sagaMiddleware = createSagaMiddleware();
-const middlewares = [routerMiddleware(history), sagaMiddleware];
-const store: Store = createStore(reducers(history), composeWithDevTools(applyMiddleware(...middlewares)));
-sagaMiddleware.run(saga);
-export default store;
+
+export const store = configureStore({
+  reducer: {
+    profile: profileReducers,
+    experience: experienceReducers,
+    highlights: highlightsReducers,
+    portfolio: portfoliosReducers
+  },
+  middleware: [sagaMiddleware]
+});
+
+sagaMiddleware.run(saga)
+
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;

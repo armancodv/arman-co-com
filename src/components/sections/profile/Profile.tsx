@@ -1,5 +1,4 @@
 import React from "react";
-import {useSelector} from "react-redux";
 import profileSelectors from "../../../redux/profile/profileSelectors";
 import './Profile.scss'
 import {FetchState} from "../../../redux/models_d";
@@ -12,18 +11,19 @@ import {Button} from "react-bootstrap";
 import {faPrint} from "@fortawesome/free-solid-svg-icons";
 import QRCode from "react-qr-code";
 import {REACT_APP_APP_BASE_URL} from "../../../config/config";
+import {useAppSelector} from "../../../redux/hooks";
 
 const Profile: React.FC = () => {
-    const fetchState = useSelector(profileSelectors.getFetchState);
-    const fullName = useSelector(profileSelectors.getFullName);
-    const description = useSelector(profileSelectors.getDescription);
-    const location = useSelector(profileSelectors.getLocation)
-    const yearOfBirth = useSelector(profileSelectors.getYearOfBirth)
-    const email = useSelector(profileSelectors.getEmail)
-    const url = useSelector(profileSelectors.getUrl)
-    const image = useSelector(profileSelectors.getImage)
-    const socials = useSelector(profileSelectors.getSocial)
-    const title = useSelector(profileSelectors.getTitle)
+    const fetchState = useAppSelector(profileSelectors.getFetchState);
+    const fullName = useAppSelector(profileSelectors.getFullName);
+    const description = useAppSelector(profileSelectors.getDescription);
+    const location = useAppSelector(profileSelectors.getLocation)
+    const yearOfBirth = useAppSelector(profileSelectors.getYearOfBirth)
+    const email = useAppSelector(profileSelectors.getEmail)
+    const url = useAppSelector(profileSelectors.getUrl)
+    const image = useAppSelector(profileSelectors.getImage)
+    const socials = useAppSelector(profileSelectors.getSocial)
+    const title = useAppSelector(profileSelectors.getTitle)
     return (
         <section className="profile">
             {fetchState !== FetchState.SUCCESS ? (

@@ -1,13 +1,13 @@
 import React from "react";
-import {useSelector} from "react-redux";
 import './Education.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUniversity} from "@fortawesome/free-solid-svg-icons";
 import profileSelectors from "../../../redux/profile/profileSelectors";
 import EducationItem from "../../items/education-item/EducationItem";
+import {useAppSelector} from "../../../redux/hooks";
 
 const Education: React.FC = () => {
-    const educationList = useSelector(profileSelectors.getEducation);
+    const educationList = useAppSelector(profileSelectors.getEducation);
     if(!educationList || !educationList.length) return null;
     return (
         <section className="education">
