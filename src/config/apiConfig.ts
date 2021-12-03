@@ -5,12 +5,12 @@ const getExperience = `${BASE}/experience.json`;
 const getHighlights = `${BASE}/highlights.json`;
 const getPortfolios = `${BASE}/portfolio.json`;
 const apiConfig = {
-    BASE,
-    getProfile,
-    getSkills,
-    getExperience,
-    getHighlights,
-    getPortfolios
-}
+  BASE,
+  getProfile,
+  getSkills,
+  getExperience,
+  getHighlights,
+  getPortfolios,
+};
 
 export default apiConfig;

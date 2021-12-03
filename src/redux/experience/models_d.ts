@@ -1,4 +1,4 @@
-import {FetchState} from "../models_d";
+import {FetchState} from '../models_d';
 export type Company = {
     id: string;
     title: string;

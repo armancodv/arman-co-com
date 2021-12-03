@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import './State.scss';
-import {Spinner} from "react-bootstrap";
-import {Variant} from "react-bootstrap/types";
-import {FetchState} from "../../../redux/models_d";
+import {Spinner} from 'react-bootstrap';
+import {Variant} from 'react-bootstrap/types';
+import {FetchState} from '../../../redux/models_d';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faExclamationTriangle} from "@fortawesome/free-solid-svg-icons";
+import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 
 interface FetchStateProps extends React.HTMLAttributes<HTMLDivElement> {
     fetchState?: FetchState,
@@ -12,21 +12,23 @@ interface FetchStateProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const State: React.FC<FetchStateProps> = (props) => {
-    const showState = (fetchState: FetchState) => {
-        switch (fetchState) {
-            case FetchState.LOADING:
-                return <Spinner animation="border" variant={props?.variant ?? 'primary'} size="sm"/>
-            case FetchState.FAIL:
-                return <FontAwesomeIcon icon={faExclamationTriangle} className={`text-${props?.variant ?? 'primary'}`} size="sm" />
-            default:
-                return null;
-        }
+  const showState = (fetchState: FetchState) => {
+    switch (fetchState) {
+      case FetchState.LOADING:
+        return <Spinner animation="border" variant={props?.variant ?? 'primary'}
+          size="sm"/>;
+      case FetchState.FAIL:
+        return <FontAwesomeIcon icon={faExclamationTriangle}
+          className={`text-${props?.variant ?? 'primary'}`} size="sm" />;
+      default:
+        return null;
     }
-    return (
-        <div className="state">
-            {showState(props?.fetchState ?? FetchState.INIT)}
-        </div>
-    );
+  };
+  return (
+    <div className="state">
+      {showState(props?.fetchState ?? FetchState.INIT)}
+    </div>
+  );
 };
 
 export default State;
