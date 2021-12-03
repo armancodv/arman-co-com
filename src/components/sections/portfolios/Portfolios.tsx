@@ -1,13 +1,13 @@
 import React from "react";
-import {useSelector} from "react-redux";
 import './Portfolios.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import portfoliosSelectors from "../../../redux/portfolio/portfolioSelectors";
 import {faFolder} from "@fortawesome/free-solid-svg-icons";
 import PortfolioItem from "../../items/portfolio-item/PortfolioItem";
+import {useAppSelector} from "../../../redux/hooks";
 
 const Portfolios: React.FC = () => {
-    const portfolioSections = useSelector(portfoliosSelectors.getPortfolioSections);
+    const portfolioSections = useAppSelector(portfoliosSelectors.getPortfolioSections);
     if (!portfolioSections || !portfolioSections.length) return null;
     return (
         <section className="portfolio">

@@ -1,11 +1,9 @@
 import React, {useEffect} from 'react';
 import './App.scss';
-import {useDispatch, useSelector} from "react-redux";
 import profileActions from "../redux/profile/profileActions";
 import experienceActions from "../redux/experience/experienceActions";
 import ReactGA from 'react-ga';
 import {GOOGLE_ANALYTICS_ID} from "../config/config";
-import routerSelectors from "../redux/router/routerSelectors";
 import highlightsActions from "../redux/highlights/highlightsActions";
 import portfoliosActions from "../redux/portfolio/portfolioActions";
 import Profile from "./sections/profile/Profile";
@@ -17,22 +15,19 @@ import Publications from "./sections/publications/Publications";
 import Footer from "./sections/footer/Footer";
 import {Col, Container, Row} from "react-bootstrap";
 import Skills from "./sections/skills/Skills";
+import {useAppDispatch} from "../redux/hooks";
 
 const App: React.FC = () => {
-    const dispatch = useDispatch();
-    const pathname = useSelector(routerSelectors.getPathname)
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
         ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+        ReactGA.pageview(window.location.pathname);
         dispatch(profileActions.fetchProfile())
         dispatch(experienceActions.fetchExperience())
         dispatch(highlightsActions.fetchHighlights())
         dispatch(portfoliosActions.fetchPortfolios())
     }, [dispatch]);
-
-    useEffect(() => {
-        ReactGA.pageview(pathname);
-    }, [pathname]);
 
     return (
         <div className="app">
