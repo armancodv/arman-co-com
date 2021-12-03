@@ -1,5 +1,5 @@
-import {FetchState} from "../models_d";
-import {IconString} from "../../utils/getFontAwesomeIcon";
+import {FetchState} from '../models_d';
+import {IconString} from '../../utils/getFontAwesomeIcon';
 
 export type Portfolio = {
     id: string;

@@ -1,5 +1,5 @@
-import {FetchState, TagGroup} from "../models_d";
-import {IconString} from "../../utils/getFontAwesomeIcon";
+import {FetchState, TagGroup} from '../models_d';
+import {IconString} from '../../utils/getFontAwesomeIcon';
 
 export type Social = {
     id: string;
