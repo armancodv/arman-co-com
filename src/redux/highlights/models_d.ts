@@ -3,7 +3,7 @@ import {FetchState} from '../models_d';
 export type Highlight = {
     id: string;
     title: string;
-    description: number;
+    description: string;
 }
 export type HighlightsResponse = Highlight[]
 export type HighlightsState = {
