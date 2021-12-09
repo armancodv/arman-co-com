@@ -8,21 +8,26 @@
   width: 100%;
   padding: 8px 0;
   color: $dark;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
+    text-align: center;
     flex-direction: column;
+  }
+  @media print {
+    text-align: left;
+    flex-direction: row;
   }
 
   &-contacts {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
+      padding: 0 12px;
+    }
+    @media print {
       padding: 0 12px;
     }
     &-title {
       font-size: 32px;
       font-weight: bold;
       margin: 16px 0 8px;
-      @include media-breakpoint-down(sm) {
-        text-align: center;
-      }
 
       &-icon {
         margin-right: 8px;
@@ -41,14 +46,20 @@
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 8px;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         justify-content: center;
+      }
+      @media print {
+        justify-content: flex-start;
       }
     }
     &-item {
       margin: 2px 24px 2px 0;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         margin: 2px 12px;
+      }
+      @media print {
+        margin: 2px 24px 2px 0;
       }
       a {
         text-decoration: none;
@@ -68,6 +79,12 @@
 
   &-description {
     text-align: justify;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+    @media print {
+      text-align: justify;
+    }
   }
 
   &-print {
@@ -78,7 +95,10 @@
 
   .qr-code {
     margin-top: 12px;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    @media print {
       display: none;
     }
   }

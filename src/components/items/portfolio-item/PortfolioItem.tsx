@@ -24,15 +24,15 @@ const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
               <FontAwesomeIcon icon={faExternalLinkAlt}
                 className="portfolio-item-title-icon-right"/>
             </h4>
+            <div className="portfolio-item-tags">
+              {props.portfolio?.tags?.map((tag) => (
+                <Badge className="portfolio-item-tag" key={tag}>{tag}</Badge>
+              ))}
+            </div>
           </div>
           <p className="portfolio-item-description">
             {props.portfolio?.description}
           </p>
-          <div className="portfolio-item-tags">
-            {props.portfolio?.tags?.map((tag) => (
-              <Badge className="portfolio-item-tag" key={tag}>{tag}</Badge>
-            ))}
-          </div>
         </article>
       </a>
     </li>

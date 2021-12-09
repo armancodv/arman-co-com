@@ -42,19 +42,23 @@ const App: React.FC = () => {
       </header>
       <Container>
         <Row>
-          <Col sm={8}>
+          <Col md={8}>
             <main className="app-main">
               <Highlights/>
               <Experience/>
-              <Portfolios/>
-              <Education/>
-              <Publications/>
             </main>
           </Col>
-          <Col sm={4}>
+          <Col md={4}>
             <aside>
               <Skills/>
             </aside>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Portfolios/>
+            <Education/>
+            <Publications/>
           </Col>
         </Row>
       </Container>

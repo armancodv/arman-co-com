@@ -14,6 +14,12 @@ body {
   a[href]:after {
     content: none !important;
   }
+  .col-md-8 {
+    width: 66.6666% !important;
+  }
+  .col-md-4 {
+    width: 33.3333% !important;
+  }
 }
 
 .app {
