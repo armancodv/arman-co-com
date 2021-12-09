@@ -16,10 +16,11 @@ const State: React.FC<FetchStateProps> = (props) => {
     switch (fetchState) {
       case FetchState.LOADING:
         return <Spinner animation="border" variant={props?.variant ?? 'primary'}
-          size="sm"/>;
+          size="sm" data-testid="state-loading"/>;
       case FetchState.FAIL:
         return <FontAwesomeIcon icon={faExclamationTriangle}
-          className={`text-${props?.variant ?? 'primary'}`} size="sm" />;
+          className={`text-${props?.variant ?? 'primary'}`} size="sm"
+          data-testid="state-fail" />;
       default:
         return null;
     }
