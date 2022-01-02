@@ -1,17 +1,20 @@
-import {call, put, takeLatest} from 'redux-saga/effects';
+import {put, takeLatest} from 'redux-saga/effects';
 import {FetchState} from '../models_d';
-import highlightsApi from './highlightsApi';
 import highlightsActions from './highlightsActions';
 import highlightsTypes from './highlightsTypes';
-import {AxiosResponse} from 'axios';
-import {HighlightsResponse} from './models_d';
+import {
+  fetchAndActivate,
+  getRemoteConfig,
+  getValue,
+} from 'firebase/remote-config';
 
 function* fetchHighlights() {
   try {
     yield put(highlightsActions.setHighlightsState(FetchState.LOADING));
-    const response: AxiosResponse<HighlightsResponse> =
-        yield call(highlightsApi.getHighlights);
-    yield put(highlightsActions.setHighlights(response.data));
+    const remoteConfig = getRemoteConfig();
+    yield fetchAndActivate(remoteConfig);
+    const response = getValue(remoteConfig, 'highlights');
+    yield put(highlightsActions.setHighlights(JSON.parse(response.asString())));
     yield put(highlightsActions.setHighlightsState(FetchState.SUCCESS));
   } catch (e) {
     yield put(highlightsActions.setHighlightsState(FetchState.FAIL));
