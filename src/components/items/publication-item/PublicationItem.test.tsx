@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import PublicationItem from './PublicationItem';
-import {Publication} from "../../../redux/profile/models_d";
+import {Publication} from '../../../redux/profile/models_d';
 
 const publication: Publication = {
   id: '1',
