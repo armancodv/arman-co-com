@@ -1,11 +1,5 @@
 import React, {useEffect} from 'react';
 import './App.scss';
-import profileActions from '../redux/profile/profileActions';
-import experienceActions from '../redux/experience/experienceActions';
-import ReactGA from 'react-ga';
-import {GOOGLE_ANALYTICS_ID} from '../config/config';
-import highlightsActions from '../redux/highlights/highlightsActions';
-import portfoliosActions from '../redux/portfolio/portfolioActions';
 import Profile from './sections/profile/Profile';
 import Highlights from './sections/highlights/Highlights';
 import Experience from './sections/experience/Experience';
@@ -16,17 +10,13 @@ import Footer from './sections/footer/Footer';
 import {Col, Container, Row} from 'react-bootstrap';
 import Skills from './sections/skills/Skills';
 import {useAppDispatch} from '../redux/hooks';
+import generalActions from '../redux/general/generalActions';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    ReactGA.initialize(GOOGLE_ANALYTICS_ID);
-    ReactGA.pageview(window.location.pathname);
-    dispatch(profileActions.fetchProfile());
-    dispatch(experienceActions.fetchExperience());
-    dispatch(highlightsActions.fetchHighlights());
-    dispatch(portfoliosActions.fetchPortfolios());
+    dispatch(generalActions.pageLoad());
   }, [dispatch]);
 
   return (

@@ -17,6 +17,7 @@
 .env.development
 .env.production
 .idea
+.firebase
 
 npm-debug.log*
 yarn-debug.log*

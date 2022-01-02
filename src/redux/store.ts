@@ -5,6 +5,12 @@ import highlightsReducers from './highlights/highlightsReducers';
 import portfoliosReducers from './portfolio/portfolioReducers';
 import createSagaMiddleware from 'redux-saga';
 import saga from './saga';
+import {initializeApp} from 'firebase/app';
+import {firebaseConfig} from '../config/firebaseConfig';
+import {getAnalytics} from 'firebase/analytics';
+
+const firebaseApp = initializeApp(firebaseConfig);
+getAnalytics(firebaseApp);
 
 const sagaMiddleware = createSagaMiddleware();
 
