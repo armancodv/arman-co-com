@@ -1,5 +1,5 @@
-import {Highlight} from './models_d';
-import {FetchState} from '../models_d';
+import { Highlight } from './models_d';
+import { FetchState } from '../models_d';
 import highlightsActions from './highlightsActions';
 import highlightsReducers from './highlightsReducers';
 

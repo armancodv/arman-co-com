@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './App.scss';
 import Profile from './sections/profile/Profile';
 import Highlights from './sections/highlights/Highlights';
@@ -7,9 +7,9 @@ import Portfolios from './sections/portfolios/Portfolios';
 import Education from './sections/education/Education';
 import Publications from './sections/publications/Publications';
 import Footer from './sections/footer/Footer';
-import {Col, Container, Row} from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Skills from './sections/skills/Skills';
-import {useAppDispatch} from '../redux/hooks';
+import { useAppDispatch } from '../redux/hooks';
 import generalActions from '../redux/general/generalActions';
 
 const App: React.FC = () => {
@@ -25,7 +25,7 @@ const App: React.FC = () => {
         <Container>
           <Row>
             <Col>
-              <Profile/>
+              <Profile />
             </Col>
           </Row>
         </Container>
@@ -34,21 +34,21 @@ const App: React.FC = () => {
         <Row>
           <Col md={8}>
             <main className="app-main">
-              <Highlights/>
-              <Experience/>
+              <Highlights />
+              <Experience />
             </main>
           </Col>
           <Col md={4}>
             <aside>
-              <Skills/>
+              <Skills />
             </aside>
           </Col>
         </Row>
         <Row>
           <Col>
-            <Portfolios/>
-            <Education/>
-            <Publications/>
+            <Portfolios />
+            <Education />
+            <Publications />
           </Col>
         </Row>
       </Container>
@@ -56,7 +56,7 @@ const App: React.FC = () => {
         <Container>
           <Row>
             <Col>
-              <Footer/>
+              <Footer />
             </Col>
           </Row>
         </Container>

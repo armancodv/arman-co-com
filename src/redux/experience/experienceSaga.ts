@@ -1,5 +1,5 @@
-import {put, takeLatest} from 'redux-saga/effects';
-import {FetchState} from '../models_d';
+import { put, takeLatest } from 'redux-saga/effects';
+import { FetchState } from '../models_d';
 import experienceActions from './experienceActions';
 import experienceTypes from './experienceTypes';
 import {
@@ -24,7 +24,5 @@ function* watchFetchExperience() {
   yield takeLatest(experienceTypes.FETCH_EXPERIENCE, fetchExperience);
 }
 
-const experienceSaga = [
-  watchFetchExperience(),
-];
+const experienceSaga = [watchFetchExperience()];
 export default experienceSaga;

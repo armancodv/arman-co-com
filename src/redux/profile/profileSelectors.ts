@@ -1,11 +1,9 @@
-import {FetchState, State, TagGroup} from '../models_d';
-import {Education, Footer, Publication, Social} from './models_d';
+import { FetchState, State, TagGroup } from '../models_d';
+import { Education, Footer, Publication, Social } from './models_d';
 
 const profileSelectors = {
   getFullName: (state: State): string =>
-    `${
-      state?.profile?.data?.firstName ?? ''
-    } ${
+    `${state?.profile?.data?.firstName ?? ''} ${
       state?.profile?.data?.lastName ?? ''
     }`,
   getNickName: (state: State): string => state?.profile?.data?.nickName ?? '',

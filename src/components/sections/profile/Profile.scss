@@ -1,6 +1,6 @@
-@import "src/components/layouts/variables";
-@import "node_modules/bootstrap/scss/bootstrap-grid";
-@import "node_modules/bootstrap/scss/mixins/breakpoints";
+@import 'src/components/layouts/variables';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
 .profile {
   display: flex;
   flex-direction: row;

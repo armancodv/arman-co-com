@@ -1,5 +1,5 @@
-import {HighlightsState} from './models_d';
-import {Action, FetchState} from '../models_d';
+import { HighlightsState } from './models_d';
+import { Action, FetchState } from '../models_d';
 import highlightsTypes from './highlightsTypes';
 
 const initialState: HighlightsState = {
@@ -8,8 +8,8 @@ const initialState: HighlightsState = {
 };
 
 const highlightsReducers = (
-    state: HighlightsState = initialState,
-    action: Action,
+  state: HighlightsState = initialState,
+  action: Action
 ): HighlightsState => {
   switch (action.type) {
     case highlightsTypes.SET_HIGHLIGHTS:

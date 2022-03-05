@@ -1,7 +1,8 @@
-import {IconProp} from '@fortawesome/fontawesome-svg-core';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import {
   faAndroid,
-  faGithub, faGooglePlay,
+  faGithub,
+  faGooglePlay,
   faJava,
   faJs,
   faLinkedin,
@@ -10,10 +11,20 @@ import {
   faPhp,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import {faTv} from '@fortawesome/free-solid-svg-icons';
+import { faTv } from '@fortawesome/free-solid-svg-icons';
 
-export type IconString = 'github' | 'linkedin' | 'twitter' | 'medium'
-    | 'js' | 'android' | 'php' | 'java' | 'nodeJs' | 'play' | 'tv';
+export type IconString =
+  | 'github'
+  | 'linkedin'
+  | 'twitter'
+  | 'medium'
+  | 'js'
+  | 'android'
+  | 'php'
+  | 'java'
+  | 'nodeJs'
+  | 'play'
+  | 'tv';
 
 const getFontAwesomeIcon = (icon: IconString): IconProp => {
   switch (icon) {

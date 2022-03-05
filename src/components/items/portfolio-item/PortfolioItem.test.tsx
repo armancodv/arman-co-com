@@ -1,7 +1,7 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import PortfolioItem from './PortfolioItem';
-import {Portfolio} from '../../../redux/portfolio/models_d';
+import { Portfolio } from '../../../redux/portfolio/models_d';
 
 const portfolio: Portfolio = {
   id: '1',
@@ -12,7 +12,7 @@ const portfolio: Portfolio = {
   tags: ['tag_1', 'tag_2'],
 };
 
-describe('portfolio item', ()=> {
+describe('portfolio item', () => {
   beforeEach(() => {
     render(<PortfolioItem portfolio={portfolio} />);
   });

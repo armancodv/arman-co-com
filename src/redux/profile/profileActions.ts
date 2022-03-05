@@ -1,5 +1,5 @@
-import {Action, FetchState} from '../models_d';
-import {ProfileResponse} from './models_d';
+import { Action, FetchState } from '../models_d';
+import { ProfileResponse } from './models_d';
 import profileTypes from './profileTypes';
 const profileActions = {
   fetchProfile: (): Action => ({

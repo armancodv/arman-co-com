@@ -1,4 +1,4 @@
-import {put, takeLatest} from 'redux-saga/effects';
+import { put, takeLatest } from 'redux-saga/effects';
 import generalTypes from './generalTypes';
 import profileActions from '../profile/profileActions';
 import experienceActions from '../experience/experienceActions';
@@ -16,7 +16,5 @@ function* watchPageLoad() {
   yield takeLatest(generalTypes.PAGE_LOAD, pageLoad);
 }
 
-const generalSaga = [
-  watchPageLoad(),
-];
+const generalSaga = [watchPageLoad()];
 export default generalSaga;

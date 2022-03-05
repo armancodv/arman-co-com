@@ -1,12 +1,13 @@
-import {Action, FetchState} from '../models_d';
-import {HighlightsResponse} from './models_d';
+import { Action, FetchState } from '../models_d';
+import { HighlightsResponse } from './models_d';
 import highlightsTypes from './highlightsTypes';
 const highlightsActions = {
   fetchHighlights: (): Action => ({
     type: highlightsTypes.FETCH_HIGHLIGHTS,
   }),
-  setHighlights: (highlights: HighlightsResponse):
-      Action<HighlightsResponse> => ({
+  setHighlights: (
+    highlights: HighlightsResponse
+  ): Action<HighlightsResponse> => ({
     type: highlightsTypes.SET_HIGHLIGHTS,
     payload: highlights,
   }),

@@ -1,5 +1,5 @@
-import {put, takeLatest} from 'redux-saga/effects';
-import {FetchState} from '../models_d';
+import { put, takeLatest } from 'redux-saga/effects';
+import { FetchState } from '../models_d';
 import profileActions from './profileActions';
 import profileTypes from './profileTypes';
 import {
@@ -25,7 +25,5 @@ function* watchFetchProfile() {
   yield takeLatest(profileTypes.FETCH_PROFILE, fetchProfile);
 }
 
-const profileSaga = [
-  watchFetchProfile(),
-];
+const profileSaga = [watchFetchProfile()];
 export default profileSaga;

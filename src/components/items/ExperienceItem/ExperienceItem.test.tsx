@@ -1,7 +1,7 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ExperienceItem from './ExperienceItem';
-import {Experience} from '../../../redux/experience/models_d';
+import { Experience } from '../../../redux/experience/models_d';
 
 const experience: Experience = {
   id: '1',
@@ -17,7 +17,7 @@ const experience: Experience = {
   duration: '2 years',
 };
 
-describe('experience item', ()=> {
+describe('experience item', () => {
   beforeEach(() => {
     render(<ExperienceItem experience={experience} />);
   });

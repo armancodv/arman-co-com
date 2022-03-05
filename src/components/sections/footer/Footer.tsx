@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.scss';
-import {Button} from 'react-bootstrap';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
   faGooglePlay,
@@ -16,7 +16,7 @@ import {
   faMapMarker,
 } from '@fortawesome/free-solid-svg-icons';
 import profileSelectors from '../../../redux/profile/profileSelectors';
-import {useAppSelector} from '../../../redux/hooks';
+import { useAppSelector } from '../../../redux/hooks';
 
 const Footer: React.FC = () => {
   const footer = useAppSelector(profileSelectors.getFooter);
@@ -47,40 +47,69 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="footer-note">
-                Visit my linkedin page to see my recommendations
+        Visit my linkedin page to see my recommendations
       </div>
       <div className="footer-buttons">
-        <Button variant="secondary" className="footer-button" size="sm"
-          href={footer?.pageSource} target="_blank">
-          <FontAwesomeIcon icon={faGithub} className="footer-button-icon"/>
-                    View source of this page
+        <Button
+          variant="secondary"
+          className="footer-button"
+          size="sm"
+          href={footer?.pageSource}
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faGithub} className="footer-button-icon" />
+          View source of this page
         </Button>
-        <Button variant="secondary" className="footer-button" size="sm"
-          href={footer?.github} target="_blank">
-          <FontAwesomeIcon icon={faGithub} className="footer-button-icon"/>
-                    My Open-Source projects
+        <Button
+          variant="secondary"
+          className="footer-button"
+          size="sm"
+          href={footer?.github}
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faGithub} className="footer-button-icon" />
+          My Open-Source projects
         </Button>
-        <Button variant="secondary" className="footer-button" size="sm"
-          href={footer?.googlePlay} target="_blank">
-          <FontAwesomeIcon icon={faGooglePlay} className="footer-button-icon"/>
-                    My applications on Google Play
+        <Button
+          variant="secondary"
+          className="footer-button"
+          size="sm"
+          href={footer?.googlePlay}
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faGooglePlay} className="footer-button-icon" />
+          My applications on Google Play
         </Button>
-        <Button variant="secondary" className="footer-button" size="sm"
-          href={footer?.medium} target="_blank">
-          <FontAwesomeIcon icon={faMedium} className="footer-button-icon"/>
-                    My medium stories
+        <Button
+          variant="secondary"
+          className="footer-button"
+          size="sm"
+          href={footer?.medium}
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faMedium} className="footer-button-icon" />
+          My medium stories
         </Button>
-        <Button variant="secondary" className="footer-button" size="sm"
-          href={footer?.linkedin} target="_blank">
-          <FontAwesomeIcon icon={faLinkedin} className="footer-button-icon"/>
-                    My linkedin profile
+        <Button
+          variant="secondary"
+          className="footer-button"
+          size="sm"
+          href={footer?.linkedin}
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faLinkedin} className="footer-button-icon" />
+          My linkedin profile
         </Button>
-        <Button variant="secondary" className="footer-button" size="sm"
+        <Button
+          variant="secondary"
+          className="footer-button"
+          size="sm"
           onClick={() => {
             window.print();
-          }}>
-          <FontAwesomeIcon icon={faDownload} className="footer-button-icon"/>
-                    Download PDF
+          }}
+        >
+          <FontAwesomeIcon icon={faDownload} className="footer-button-icon" />
+          Download PDF
         </Button>
       </div>
     </div>

@@ -1,33 +1,30 @@
-import {ProfileState} from './profile/models_d';
-import {ExperienceState} from './experience/models_d';
-import {HighlightsState} from './highlights/models_d';
-import {PortfoliosState} from './portfolio/models_d';
+import { ProfileState } from './profile/models_d';
+import { ExperienceState } from './experience/models_d';
+import { HighlightsState } from './highlights/models_d';
+import { PortfoliosState } from './portfolio/models_d';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Action<P = any> = {
-    type: string;
-    payload?: P;
-}
+  type: string;
+  payload?: P;
+};
 
 export enum FetchState {
-    // eslint-disable-next-line no-unused-vars
-    INIT = 'INIT',
-    // eslint-disable-next-line no-unused-vars
-    LOADING = 'LOADING',
-    // eslint-disable-next-line no-unused-vars
-    SUCCESS = 'SUCCESS',
-    // eslint-disable-next-line no-unused-vars
-    FAIL = 'FAIL'
+  INIT = 'INIT',
+  LOADING = 'LOADING',
+  SUCCESS = 'SUCCESS',
+  FAIL = 'FAIL',
 }
 
 export type State = {
-    profile: ProfileState;
-    experience: ExperienceState;
-    highlights: HighlightsState;
-    portfolio: PortfoliosState;
-}
+  profile: ProfileState;
+  experience: ExperienceState;
+  highlights: HighlightsState;
+  portfolio: PortfoliosState;
+};
 
 export type TagGroup = {
-    id: string;
-    title: string;
-    tags: string[];
-}
+  id: string;
+  title: string;
+  tags: string[];
+};

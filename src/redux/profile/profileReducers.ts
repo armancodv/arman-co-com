@@ -1,5 +1,5 @@
-import {ProfileState} from './models_d';
-import {Action, FetchState} from '../models_d';
+import { ProfileState } from './models_d';
+import { Action, FetchState } from '../models_d';
 import profileTypes from './profileTypes';
 
 const initialState: ProfileState = {
@@ -13,8 +13,8 @@ const initialState: ProfileState = {
 };
 
 const profileReducers = (
-    state: ProfileState = initialState,
-    action: Action,
+  state: ProfileState = initialState,
+  action: Action
 ): ProfileState => {
   switch (action.type) {
     case profileTypes.SET_PROFILE:

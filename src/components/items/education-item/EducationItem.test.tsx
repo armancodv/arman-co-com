@@ -1,7 +1,7 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import EducationItem from './EducationItem';
-import {Education} from '../../../redux/profile/models_d';
+import { Education } from '../../../redux/profile/models_d';
 
 const education: Education = {
   id: '1',
@@ -11,7 +11,7 @@ const education: Education = {
   duration: '2 years',
 };
 
-describe('education item', ()=> {
+describe('education item', () => {
   beforeEach(() => {
     render(<EducationItem education={education} />);
   });
