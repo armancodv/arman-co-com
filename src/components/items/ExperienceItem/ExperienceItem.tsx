@@ -1,10 +1,10 @@
 import React from 'react';
-import {Experience} from '../../../redux/experience/models_d';
+import { Experience } from '../../../redux/experience/models_d';
 import './ExperienceItem.scss';
-import {Image} from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 
 interface ExperienceItemProps extends React.HTMLAttributes<HTMLDivElement> {
-    experience: Experience;
+  experience: Experience;
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
@@ -12,8 +12,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
     <li>
       <article className="experience-item">
         <div className="experience-item-avatar">
-          <Image className="image" src={props.experience?.company?.image}
-            rounded={true}/>
+          <Image
+            className="image"
+            src={props.experience?.company?.image}
+            rounded={true}
+          />
         </div>
         <div className="experience-item-details">
           <h3 className="experience-item-title">{props.experience?.title}</h3>
@@ -27,8 +30,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
             {props.experience?.location}
           </p>
           {props.experience?.description?.split('\n')?.map((line) => (
-            <p className="experience-item-description" key={line}>{line}</p>),
-          )}
+            <p className="experience-item-description" key={line}>
+              {line}
+            </p>
+          ))}
         </div>
       </article>
     </li>

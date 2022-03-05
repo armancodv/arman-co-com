@@ -1,0 +1,8 @@
+.firebase
+.github
+.idea
+build/
+node_modules/
+public
+package-lock.json
+*.yml

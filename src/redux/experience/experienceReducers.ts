@@ -1,5 +1,5 @@
-import {ExperienceState} from './models_d';
-import {Action, FetchState} from '../models_d';
+import { ExperienceState } from './models_d';
+import { Action, FetchState } from '../models_d';
 import experienceTypes from './experienceTypes';
 
 const initialState: ExperienceState = {
@@ -8,8 +8,8 @@ const initialState: ExperienceState = {
 };
 
 const experienceReducers = (
-    state: ExperienceState = initialState,
-    action: Action,
+  state: ExperienceState = initialState,
+  action: Action
 ): ExperienceState => {
   switch (action.type) {
     case experienceTypes.SET_EXPERIENCE:

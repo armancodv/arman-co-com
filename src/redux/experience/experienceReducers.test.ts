@@ -1,7 +1,7 @@
 import experienceReducers from './experienceReducers';
 import experienceActions from './experienceActions';
-import {Experience} from './models_d';
-import {FetchState} from '../models_d';
+import { Experience } from './models_d';
+import { FetchState } from '../models_d';
 
 const experience: Experience = {
   id: '1',

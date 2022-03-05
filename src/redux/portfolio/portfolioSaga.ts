@@ -1,5 +1,5 @@
-import {put, takeLatest} from 'redux-saga/effects';
-import {FetchState} from '../models_d';
+import { put, takeLatest } from 'redux-saga/effects';
+import { FetchState } from '../models_d';
 import portfoliosActions from './portfolioActions';
 import portfoliosTypes from './portfolioTypes';
 import {
@@ -25,7 +25,5 @@ function* watchFetchPortfolios() {
   yield takeLatest(portfoliosTypes.FETCH_PORTFOLIOS, fetchPortfolios);
 }
 
-const portfoliosSaga = [
-  watchFetchPortfolios(),
-];
+const portfoliosSaga = [watchFetchPortfolios()];
 export default portfoliosSaga;

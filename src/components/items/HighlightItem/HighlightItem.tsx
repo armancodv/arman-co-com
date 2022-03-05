@@ -1,9 +1,9 @@
 import React from 'react';
-import {Highlight} from '../../../redux/highlights/models_d';
+import { Highlight } from '../../../redux/highlights/models_d';
 import './HighlightItem.scss';
 
 interface HighlightItemProps extends React.HTMLAttributes<HTMLDivElement> {
-    highlight: Highlight;
+  highlight: Highlight;
 }
 
 const HighlightItem: React.FC<HighlightItemProps> = (props) => {

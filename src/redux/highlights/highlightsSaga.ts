@@ -1,5 +1,5 @@
-import {put, takeLatest} from 'redux-saga/effects';
-import {FetchState} from '../models_d';
+import { put, takeLatest } from 'redux-saga/effects';
+import { FetchState } from '../models_d';
 import highlightsActions from './highlightsActions';
 import highlightsTypes from './highlightsTypes';
 import {
@@ -25,7 +25,5 @@ function* watchFetchHighlights() {
   yield takeLatest(highlightsTypes.FETCH_HIGHLIGHTS, fetchHighlights);
 }
 
-const highlightsSaga = [
-  watchFetchHighlights(),
-];
+const highlightsSaga = [watchFetchHighlights()];
 export default highlightsSaga;

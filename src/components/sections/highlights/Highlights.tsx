@@ -2,7 +2,7 @@ import React from 'react';
 import './Highlights.scss';
 import highlightsSelectors from '../../../redux/highlights/highlightsSelectors';
 import HighlightItem from '../../items/HighlightItem/HighlightItem';
-import {useAppSelector} from '../../../redux/hooks';
+import { useAppSelector } from '../../../redux/hooks';
 
 const Highlights: React.FC = () => {
   const highlights = useAppSelector(highlightsSelectors.getHighlights);

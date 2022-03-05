@@ -1,9 +1,9 @@
 import React from 'react';
-import {Image} from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import './Avatar.scss';
 
 interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
-    src: string;
+  src: string;
 }
 
 const Avatar: React.FC<AvatarProps> = (props) => {

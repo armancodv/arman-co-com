@@ -1,5 +1,5 @@
-import {ProfileResponse} from './models_d';
-import {FetchState} from '../models_d';
+import { ProfileResponse } from './models_d';
+import { FetchState } from '../models_d';
 import profileActions from './profileActions';
 import profileReducers from './profileReducers';
 

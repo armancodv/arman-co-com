@@ -1,5 +1,5 @@
-import {Action, FetchState} from '../models_d';
-import {PortfoliosState} from './models_d';
+import { Action, FetchState } from '../models_d';
+import { PortfoliosState } from './models_d';
 import portfoliosTypes from './portfolioTypes';
 
 const initialState: PortfoliosState = {
@@ -8,8 +8,8 @@ const initialState: PortfoliosState = {
 };
 
 const portfoliosReducers = (
-    state: PortfoliosState = initialState,
-    action: Action,
+  state: PortfoliosState = initialState,
+  action: Action
 ): PortfoliosState => {
   switch (action.type) {
     case portfoliosTypes.SET_PORTFOLIOS:

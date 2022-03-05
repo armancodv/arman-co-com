@@ -1,5 +1,5 @@
-import {Portfolio, PortfolioSection} from './models_d';
-import {FetchState} from '../models_d';
+import { Portfolio, PortfolioSection } from './models_d';
+import { FetchState } from '../models_d';
 import portfoliosActions from './portfolioActions';
 import portfoliosReducers from './portfolioReducers';
 
