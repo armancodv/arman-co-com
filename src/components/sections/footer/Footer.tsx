@@ -31,18 +31,37 @@ const Footer: React.FC = () => {
       <h2 className="footer-contacts-title">{fullName}</h2>
       <div className="footer-contacts-container">
         <div className="footer-contacts-item">
-          <FontAwesomeIcon icon={faMapMarker} color="#7c9a8e" /> {location}
+          <FontAwesomeIcon
+            icon={faMapMarker}
+            color="#7c9a8e"
+            className="footer-contacts-item-icon"
+          />{' '}
+          {location}
         </div>
         <div className="footer-contacts-item">
-          <FontAwesomeIcon icon={faCalendar} color="#7c9a8e" />
+          <FontAwesomeIcon
+            icon={faCalendar}
+            color="#7c9a8e"
+            className="footer-contacts-item-icon"
+          />
           Born in {yearOfBirth}
         </div>
         <div className="footer-contacts-item">
-          <FontAwesomeIcon icon={faEnvelope} color="#7c9a8e" /> {email}
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            color="#7c9a8e"
+            className="footer-contacts-item-icon"
+          />{' '}
+          {email}
         </div>
         <div className="footer-contacts-item footer-contacts-url">
           <a href={url}>
-            <FontAwesomeIcon icon={faGlobe} color="#7c9a8e" /> {url}
+            <FontAwesomeIcon
+              icon={faGlobe}
+              color="#7c9a8e"
+              className="footer-contacts-item-icon"
+            />{' '}
+            {url}
           </a>
         </div>
       </div>

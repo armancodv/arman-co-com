@@ -41,20 +41,36 @@ const Profile: React.FC = () => {
             <h2 className="profile-contacts-subtitle">{title}</h2>
             <div className="profile-contacts-container">
               <div className="profile-contacts-item">
-                <FontAwesomeIcon icon={faMapMarker} color="#477361" />
+                <FontAwesomeIcon
+                  icon={faMapMarker}
+                  color="#477361"
+                  className="profile-contacts-item-icon"
+                />
                 {location}
               </div>
               <div className="profile-contacts-item">
-                <FontAwesomeIcon icon={faCalendar} color="#477361" />
+                <FontAwesomeIcon
+                  icon={faCalendar}
+                  color="#477361"
+                  className="profile-contacts-item-icon"
+                />
                 Born in {yearOfBirth}
               </div>
               <div className="profile-contacts-item">
-                <FontAwesomeIcon icon={faEnvelope} color="#477361" />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  color="#477361"
+                  className="profile-contacts-item-icon"
+                />
                 {email}
               </div>
               <div className="profile-contacts-item profile-contacts-url">
                 <a href={url}>
-                  <FontAwesomeIcon icon={faGlobe} color="#477361" />
+                  <FontAwesomeIcon
+                    icon={faGlobe}
+                    color="#477361"
+                    className="profile-contacts-item-icon"
+                  />
                   {url}
                 </a>
               </div>

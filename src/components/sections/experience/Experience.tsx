@@ -12,7 +12,7 @@ const Experience: React.FC = () => {
   return (
     <section className="experience">
       <h2 className="experience-title">
-        <FontAwesomeIcon icon={faBriefcase} className="highlights-title-icon" />
+        <FontAwesomeIcon icon={faBriefcase} className="experience-title-icon" />
         Experience
       </h2>
       <ul className="experience-container">
