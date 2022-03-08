@@ -21,6 +21,9 @@
     }
     &-item {
       margin-right: 24px;
+      &-icon {
+        margin-right: 4px;
+      }
       a {
         text-decoration: none;
         color: $dark;

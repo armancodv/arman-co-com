@@ -12,10 +12,7 @@ const Education: React.FC = () => {
   return (
     <section className="education">
       <h2 className="education-title">
-        <FontAwesomeIcon
-          icon={faUniversity}
-          className="highlights-title-icon"
-        />
+        <FontAwesomeIcon icon={faUniversity} className="education-title-icon" />
         Education
       </h2>
       <ul className="education-container">
